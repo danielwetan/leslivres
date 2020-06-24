@@ -1,0 +1,15 @@
+# Main
+<div className="container">
+  <div className="row"
+    <div className="col-12"
+
+
+# Navbar
+<Navbar>
+  <NavbarMain />
+  <NavbarDiscover />
+</Navbar>
+
+Cara pengaturan profile section
+if(isLogin) ? <Profile /> : <Login />
+

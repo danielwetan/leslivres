@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'Quicksand';
+	src: url(quicksand.woff2) format('woff2');
+ }
+
+body {
+  font-family: 'Quicksand';
+  font-size: 16px;
+  font-weight: 500;
+  color: #373D3F;
+  background-color: #f1f1f1;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-container {
+  padding: 20px;
+}
+
+.counter-btn {
+  min-height: 40px;
+  min-width: 40px;
+  margin: 5px;
+}
