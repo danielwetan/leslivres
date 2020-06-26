@@ -1,5 +1,38 @@
-# Create sidebar menu
+# Menu
+- Edit font
+- Add icon
+- Add search bar
+- Add login bar
+- Change logo
 
-# Create Logo
+# Login / Register
+- Create Login Menu
 
-Create Login Menu
+# Home 
+- Finish featured
+- Finish Popular & genre
+- Finish book row
+
+# Footer
+- Make footer looks different
+- Add social icon (locally)
+- Add email form
+
+if(allTask) ? pisahkanComponent : selesaikan
+
+## URGENT
+- Edit Sidebar font
+- Edit book list img & title
+- Make footer center
+
+## Logic (integration with backend)
+- Login 
+- Register 
+- Refresh Token
+- CRUD Book 
+
+Get in Touch
+About
+Contact
+Faq
+Technologies

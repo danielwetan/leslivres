@@ -1,15 +1,19 @@
 @font-face {
+	font-family: 'Roboto 500';
+	src: url(roboto.woff2) format('woff2');
+}
+
+@font-face {
 	font-family: 'Quicksand';
 	src: url(quicksand.woff2) format('woff2');
- }
+}
+
 
 body {
   font-family: 'Quicksand';
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
   color: #373D3F;
-  background-color: #f1f1f1;
-
+  background-color: white;
 }
 
 .container {
@@ -27,3 +31,61 @@ body {
   height: 2000px;
 }
 
+.sidenav {
+  height: 100%;
+  top: 0;
+  position: sticky;
+}
+
+.book-title {
+  font-family: 'Roboto 500';
+  font-size: 14px;
+  margin-top: -15px;
+}
+
+.sidebar-title {
+  font-family: 'Quicksand';
+  font-size: 13px;
+}
+
+.sidebar-body {
+  font-family: 'Roboto 500';
+  text-decoration: none;
+  color: gray;
+}
+
+.sidebar-body a {
+  color: gray;
+}
+
+.content-title {
+  font-family: 'Roboto 500';
+}
+
+.sidebar-link a {
+  text-decoration: none;
+}
+
+.sidebar-link a:hover {
+  color: #373D3F;
+}
+
+/* Footer */
+.social-rounded {
+  background-color: lightgray;
+  color: gray;
+  width: 50px;
+  height: 50px;
+  padding-top: 7px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 50%;
+}
+
+.social-rounded a {
+  color: gray
+}
+
+.social-rounded a:hover {
+  color: #373D3F
+}

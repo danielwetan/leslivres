@@ -13,3 +13,5 @@
 Cara pengaturan profile section
 if(isLogin) ? <Profile /> : <Login />
 
+Todo:
+- Convert to plain bootstrap
