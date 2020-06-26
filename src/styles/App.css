@@ -70,6 +70,14 @@ body {
   color: #373D3F;
 }
 
+.bg-gray {
+  background-color: gray;
+}
+
+.bg-lightgray {
+  background-color: lightgray;
+}
+
 /* Footer */
 .social-rounded {
   background-color: lightgray;
@@ -88,4 +96,77 @@ body {
 
 .social-rounded a:hover {
   color: #373D3F
+}
+
+/* Profile */
+.profile-rounded {
+  background-color: lightgray;
+  color: gray;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50%;
+  padding-top: 5px;
+}
+
+.profile-rounded {
+  color: gray
+}
+
+.profile-rounded:hover {
+  color: #373D3F
+}
+
+/*
+.profile-img {
+  border-radius: 50%;
+  background-color: none;
+  display: inline-block;
+}
+
+.profile-img:hover {
+ border-radius: 50%;
+ width: 45px;
+ height: 45px;
+} */
+
+.profile-img-container {
+  position: relative;
+  width: 40px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.profile-img-container:hover .profile-img {
+  opacity: 0.7;
+}
+
+.profile-dropdown-bg {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.profile-dropdown-bg:hover {
+  background-color: white;
+
+}
+
+.profile-dropdown-bg:active {
+  border-color: red;
+}
+
+.search-bar {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 13px;
 }

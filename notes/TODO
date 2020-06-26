@@ -1,6 +1,4 @@
 # Menu
-- Edit font
-- Add icon
 - Add search bar
 - Add login bar
 - Change logo
@@ -12,18 +10,14 @@
 - Finish featured
 - Finish Popular & genre
 - Finish book row
+- Edit book list img & title
 
 # Footer
 - Make footer looks different
-- Add social icon (locally)
 - Add email form
 
-if(allTask) ? pisahkanComponent : selesaikan
-
-## URGENT
-- Edit Sidebar font
-- Edit book list img & title
-- Make footer center
+# DetailBook
+- Create page layout
 
 ## Logic (integration with backend)
 - Login 
@@ -31,8 +25,8 @@ if(allTask) ? pisahkanComponent : selesaikan
 - Refresh Token
 - CRUD Book 
 
-Get in Touch
-About
-Contact
-Faq
-Technologies
+
+## MENU CONFIGURATION
+https://stackoverflow.com/questions/24270816/how-can-i-add-a-different-menu-to-the-mobile-version-of-my-bootstrap-theme-in-wo
+
+Convert all css to sass
