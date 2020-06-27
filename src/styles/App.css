@@ -17,18 +17,8 @@ body {
 }
 
 .container {
-  height: 100%;
-  width: 100%;
   justify-content: center;
   align-items: center;
-}
-
-.body-container {
-  padding: 20px;
-}
-
-.main-content {
-  height: 2000px;
 }
 
 .sidenav {
@@ -100,14 +90,14 @@ body {
 
 /* Profile */
 .profile-rounded {
-  background-color: lightgray;
+  background-color: white;
   color: gray;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 50%;
-  padding-top: 5px;
+  padding-top: 4px;
 }
 
 .profile-rounded {
@@ -170,3 +160,49 @@ body {
   padding-bottom: 10px;
   border-radius: 13px;
 }
+
+.register-img {
+  max-height: 300px;
+}
+
+.login-img {
+  max-height: 300px;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+.nav-icon {
+  background-color: white;
+  color: gray;
+}
+
+.nav-icon:hover {
+  color: #373D3F;
+}
+
+.nav-icon-border {
+  width: 35px;
+  height: 35px;
+}
+
+
+/* .profile-rounded {
+  background-color: white;
+  color: gray;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 50%;
+  padding-top: 4px;
+}
+
+.profile-rounded {
+  color: gray
+}
+
+.profile-rounded:hover {
+  color: #373D3F
+} */

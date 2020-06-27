@@ -4,14 +4,14 @@ const Form = () => {
   return(
     <>
     <div className="content-title">
-<h5 className="mx-sm-3">Get latest news</h5>
+<h6 className="mx-sm-3">Get latest news</h6>
 </div>
 <form>
   <div class="form-group mx-sm-3 mb-2">
     <input type="email" class="form-control" id="inputPassword2" placeholder="Enter Your Email"></input>
   </div>
 </form>
-<button type="button" class="btn bg-lightgray mx-sm-3 mt-2">Subscribe</button>
+<button type="button" class="btn bg-lightgray mx-sm-3 mt-1">Subscribe</button>
 
     </>
   )

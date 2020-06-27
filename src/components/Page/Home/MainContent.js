@@ -13,20 +13,35 @@ const MainContent = () => {
         </div>
       </div>
 
+
       {/* Header content */}
+       {/* <div className="row">
        <div className="row">
-        <div className="col-md-6">
-          <Featured />
+        <div className="col-md-6 col-12">
+          <ul>
+            <li>Hello</li>
+          </ul>
         </div>
-        <div className="col-md-6">
+        </div>
+        
+        <div className="col-md-6 col-12 ">
           <div className="row">
-            <Popular />
+          <ul>
+            <li>Hello</li>
+          </ul>
           </div>
           <div className="row mt-3">
-            <Genre />
+          <ul>
+            <li>Hello</li>
+          </ul>
           </div>
         </div>
-      </div>
+      </div> */}
+
+
+
+      
+      
 
       {/* Book section */}
       <div className="row mt-3">
@@ -49,7 +64,10 @@ const MainContent = () => {
           <Book />
         </div>
       </div>
+
+
       
+
     </>
   )
 }

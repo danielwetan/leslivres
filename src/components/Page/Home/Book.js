@@ -4,7 +4,7 @@ import Img from '../../../images/harry-potter.jpg';
 const Book = () => {
   return(
     <>
-      <div class="card border-0">
+      <div class="card border-0 mr-auto">
         <img src={Img} class="card-img-top" alt="..."></img>
         <div class="card-body">
           <div class="book-title text-center">

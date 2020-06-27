@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Sidebar(props) {
     return (
       <>
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse sidenav">   
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse sidenav navbar-collapse">   
       <div class="sidebar-sticky pt-3">
         <div class="d-flex justify-content-between align-items-center px-3 mt-3 mb-1 text-muted sidebar-title">
           Discover

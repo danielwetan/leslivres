@@ -1,6 +1,4 @@
 # Menu
-- Add search bar
-- Add login bar
 - Change logo
 
 # Login / Register
@@ -13,11 +11,10 @@
 - Edit book list img & title
 
 # Footer
-- Make footer looks different
-- Add email form
+- Edit email form
 
 # DetailBook
-- Create page layout
+- Customize detail book layout
 
 ## Logic (integration with backend)
 - Login 

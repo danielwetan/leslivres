@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImg from '../../../images/background/bg-5.jpg';
+import backgroundImg from '../../../images/background/svg/book-lover.svg';
 
 import axios from 'axios';
 import Product from './Product';
@@ -98,7 +98,7 @@ class Main extends React.Component {
     <div className="row justify-content-center align-items-center">
       <div className="col-md-8 col-sm-12">
       <img src={backgroundImg}
-           className=""
+           className="login-img"
            alt="Book"
            width="100%"
            height="100%"></img>
