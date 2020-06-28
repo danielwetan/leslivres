@@ -53,8 +53,6 @@ const NavbarMain = (props) => {
                   </div>
                   </DropdownToggle>
                   <DropdownMenu className="mt-4">
-                    {/* <DropdownItem>Login</DropdownItem>
-                    <DropdownItem>Register</DropdownItem> */}
                     <DropdownItem>Profile</DropdownItem>
                     <DropdownItem>Add book</DropdownItem>
                     <DropdownItem>Favorite</DropdownItem>
