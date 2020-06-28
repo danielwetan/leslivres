@@ -1,12 +1,19 @@
+# Head
+- Change favicon
+- Update title based on page 
+
 # Menu
 - Change logo
+- Change search bar to form 
+- Add search icon to search bar
+- Design profile dropdown
 
 # Login / Register
-- Create Login Menu
+- Create Login and register modal
 
 # Home 
 - Finish featured
-- Finish Popular & genre
+- Finish popular & genre
 - Finish book row
 - Edit book list img & title
 
@@ -21,9 +28,5 @@
 - Register 
 - Refresh Token
 - CRUD Book 
-
-
-## MENU CONFIGURATION
-https://stackoverflow.com/questions/24270816/how-can-i-add-a-different-menu-to-the-mobile-version-of-my-bootstrap-theme-in-wo
 
 Convert all css to sass

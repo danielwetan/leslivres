@@ -1,7 +1,7 @@
 import React from 'react';
-import Featured from './Featured';
-import Popular from './Popular';
-import Genre from './Genre';
+// import Featured from './Featured';
+// import Popular from './Popular';
+// import Genre from './Genre';
 import Book from './Book';
 
 const MainContent = () => {
