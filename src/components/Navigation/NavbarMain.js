@@ -12,8 +12,6 @@ import {
 import Logo from '../../images/logo/logo.png'
 // import ProfileImg from '../../images/profile.jpg'
 
-import { Link } from 'react-router-dom'
-
 const NavbarMain = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
 
