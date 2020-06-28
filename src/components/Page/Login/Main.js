@@ -108,7 +108,6 @@ class Main extends React.Component {
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" type="text" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})}></input>
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
