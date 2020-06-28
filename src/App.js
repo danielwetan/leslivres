@@ -3,6 +3,7 @@ import Detail from './pages/DetailBook'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register';
+import AddBook from './pages/AddBook'
 
 import {
   BrowserRouter as Router,
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/register">
             <Register />
+          </Route>
+          <Route path="/add-book">
+            <AddBook />
           </Route>
           <Route path="/">
             <Home />

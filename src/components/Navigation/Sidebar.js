@@ -20,7 +20,7 @@ function Sidebar(props) {
           </li>
           <li class="nav-item">
             <span class="nav-link sidebar-link">
-              <Link to="/">
+              <Link to="/add-book">
               <span><i class="fas fa-clock mr-2"></i>Newest</span>
               </Link>
             </span>

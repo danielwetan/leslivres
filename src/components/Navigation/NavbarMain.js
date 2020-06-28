@@ -6,28 +6,17 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Input,
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter
+  Input
 } from 'reactstrap';
 
 import { Link } from 'react-router-dom'
 
 import Logo from '../../images/logo/logo.png'
-import ProfileImg from '../../images/profile.jpg'
+// import ProfileImg from '../../images/profile.jpg'
 
 const NavbarMain = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const dropdownToggle = () => setDropdownOpen(prevState => !prevState)
-
-  // Modal
-  const { buttonLabel = 'Add book', className = 'navbar-modal' } = props;
-  const [modal, setModal] = useState(false);
-  const toggle = () => setModal(!modal);
-  const closeBtn = <button className="close" onClick={toggle}>&times;</button>
 
   return (
     <>
@@ -46,15 +35,16 @@ const NavbarMain = (props) => {
             <li class="nav-item ">
               <span class="nav-link ">
                   {/* Public User */}
-                  <Dropdown direction="left" isOpen={dropdownOpen} toggle={dropdownToggle} className="profile-dropdown-bg">
+                  <Dropdown caret direction="left" isOpen={dropdownOpen} toggle={dropdownToggle} className="profile-dropdown-bg">
                   <DropdownToggle className="profile-dropdown-bg border-0 px-0 py-0">
                   <div className="profile-rounded">
                   <span class="fas fa-user"></span>
-                  </div>
+                </div>
                   </DropdownToggle>
+
                   <DropdownMenu className="mt-4">
-                    <DropdownItem>Profile</DropdownItem>
-                    <DropdownItem>Add book</DropdownItem>
+                  <Link to="/detail"><DropdownItem>Profile</DropdownItem></Link>
+                    <Link to="/add-book"><DropdownItem>Add book</DropdownItem></Link>
                     <DropdownItem>Favorite</DropdownItem>
                     <DropdownItem>Logout</DropdownItem>
                   </DropdownMenu>
@@ -95,22 +85,14 @@ const NavbarMain = (props) => {
                   </DropdownToggle>
 
                   <DropdownMenu className="mt-4">
-                    <DropdownItem onClick={toggle}>Profile</DropdownItem>
+                    <Link to="/detail"><DropdownItem>Profile</DropdownItem></Link>
+                    <Link to="/add-book"><DropdownItem>Add book</DropdownItem></Link>
                     <DropdownItem>Favorite</DropdownItem>
                     <DropdownItem>Logout</DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
 
-                <Modal isOpen={modal} toggle={toggle} className={className}>
-                  <ModalHeader toggle={toggle} close={closeBtn}>Modal Title</ModalHeader>
-                  <ModalBody>
-                    Lorem ipsum dolor sit amet
-                  </ModalBody>
-                    <ModalFooter>
-                    <Button color="primary" onClick={toggle}>Do Something</Button>
-                    <Button color="secondary" onClick={toggle}>Cancel</Button>
-                  </ModalFooter>
-                </Modal>
+
 
 {/* <div class="dropdown" className="profile-dropdown-bg">
 <button data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="border-0 bg-light">

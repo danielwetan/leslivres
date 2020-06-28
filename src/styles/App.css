@@ -206,3 +206,9 @@ body {
 .profile-rounded:hover {
   color: #373D3F
 } */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1050px;
+  }
+}

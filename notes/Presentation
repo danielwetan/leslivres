@@ -1,20 +1,82 @@
 Introduction
 
 React DOM
-- What is React 
-- What DOM
-- What is React DOM 
+* What is React 
 
+  React is JavaScript library for building user interface.
+  React dibuat oleh Facebook pada tahun 2013
+
+  React advantages:
+  - Declarative
+    React mempermudah kita untuk membuat UI karena kita bisa membuat satu komponen
+    lalu merender dengan value yang berbeda.
+    Contoh seperti component buku di homepage.
+    React secara otomatis akan merender ulang page ketika terjadi perubahan data.
+  
+  - Component Based
+    Kita bisa memecah UI menjadi komponen" kecil untuk mempermudah development.
+    Lalu menyusunnya kembali seperti menyusun lego.
+  
+  - Learn Once, Write anywhere
+    Kita bisa menggunakan React pada aplikasi tanpa perlu mengubah codebase pada backend.
+    React juga bisa digunakan untuk mobile development menggunakan React Native.
+
+Who using React ?
+- Facebook
+- WhatsApp
+- Instagram
+- Netflix
+- Dropbox
+- Discord
+
+* What is DOM (Document Object Model)
+
+  DOM adalah API HTML. Ketika suatu page di akses, browser akan membuat DOM secara otomatis.
+  Dengan DOM, Javascript dapat mengakses dengan mengubah element pada HTML 
+
+* What is React Virtual DOM 
+  Dalam bahasa sederhana React Virtual DOM merupakan salinan dari HTML DOM.
+  React Virtual DOM membuat React dapat memanipulasi dan melewati proses dari DOM HTML.
+
+  Perbedaan antara HTML DOM dan React Virtual DOM ada di kecepatan.
+
+  Dengan React Virtual DOM, ketika terjadi perubahan, browser hanya merender bagian yang berubah. 
+  Sedangkan HTML DOM akan mengubah keseluruhan halaman
+  
 Project overview
-- What app ?
-- Design concept
-- Layout and Color
+* What app ?
+  Saya membuat frontend untuk library app menggunakan React.
+  Aplikasi ini mempunyai fungsional seperti:
+  - CRUD
+  - Login / Register
+  - Peminjaman Buku
+
+  Untuk fiturnya akan saya demokan nanti setelah presentasi selesai
+
+* Layout and Color
+  __GAMBAR LAYOUT___
+  Pada tampilan homepage saya menggunakan tiga row.
+  Row pertama berisi main navigation seperti logo, search bar dan profile bar.
+  Kemudian row kedua berisi Sidebar dan Main content 
+  Lalu row terakhir berisi footer
 
 Live preview
-- Login / Register
-- CRUD (include borrow flow)
-- Search, sort, pagination
-- Upload Image
-- Logout
-- Responsive
-- Penutupan (share app link)
+* Login / Register
+* CRUD (include borrow flow)
+* Search, sort, pagination
+* Upload Image
+* Logout
+* Responsive
+* Penutupan (share app link)
+
+
+* What is React 
+  React advantages:
+  - Declarative
+  - Component Based
+  - Learn Once, Write anywhere
+  Who using React ?
+* What is DOM (Document Object Model)
+* What is React Virtual DOM 
+* What app ?
+* Layout and Color
