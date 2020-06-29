@@ -33,6 +33,11 @@ body {
   margin-top: -15px;
 }
 
+.book-author {
+  font-family: 'Quicksand';
+  font-size: 13px;
+}
+
 .sidebar-title {
   font-family: 'Quicksand';
   font-size: 13px;

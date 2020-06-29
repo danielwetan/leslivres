@@ -20,7 +20,7 @@ function Hooks(props) {
   const incrementCount = () => {
     // this.setState({
     //   count: this.state.count + 1 
-    setCount( count + 1)  
+    setCount(count + 1)  
   }
 
   const [title, setTitle] = useState('Hooks')

@@ -18,7 +18,7 @@ class Register extends React.Component {
     event.preventDefault()
     axios({
       method: 'post',
-      url: 'localhost:3000/auth/register',
+      url: 'http://localhost:3000/auth/register',
       data: {
         username: this.state.username,
         password: this.state.password,
