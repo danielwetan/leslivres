@@ -1,29 +1,27 @@
 import React, { Component } from 'react'
-
 import Form from './Form'
 import Social from './Social'
 import About from './About'
-
 
 class Footer extends Component {
   render() {
     return(
       <>
-    <footer>
-      <div className="mt-5 py-3">
-        <div className="row justify-content-center ">
-          <div className="col-md-4 col-12 ">
-            <About />
+        <footer>
+          <div className="mt-5 py-3">
+            <div className="row justify-content-center ">
+              <div className="col-md-4 col-12 ">
+                <About />
+              </div>
+              <div className="col-md-4 col-12">
+                <Social />
+              </div>
+              <div className="col-md-4 col-12">
+                <Form />
+              </div>
+            </div>
           </div>
-          <div className="col-md-4 col-12">
-            <Social />
-          </div>
-          <div className="col-md-4 col-12">
-            <Form />
-          </div>
-        </div>
-      </div>
-    </footer>
+        </footer>
       </>
     )
   }

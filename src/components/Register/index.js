@@ -35,7 +35,6 @@ class Register extends React.Component {
         <h1 class="h1">Register</h1>
         </div>
       </div>
-
     {/* Main Section*/}
     <div className="row justify-content-center align-items-center">
       

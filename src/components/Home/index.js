@@ -3,7 +3,6 @@ import BookLists from '../Home/BookLists'
 import Featured from '../Home/Featured'
 import Popular from '../Home/Popular'
 import Genre from '../Home/Genre'
-
 import backgroundImg from '../../images/background/svg/book-lover.svg'
 
 const Home = () => {

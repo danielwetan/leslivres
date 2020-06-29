@@ -83,7 +83,6 @@ class Main extends React.Component {
     })
   }
 
-
   render() {
   return(
     <>
@@ -117,15 +116,10 @@ class Main extends React.Component {
            width="100%"
            height="100%"></img>
       </div>
-
     </div>
-
     {this.state.products.map((product) => {
       return <Product key={product.id} title={product.title} description={product.description} />
-    })}
-
- 
-
+    })} 
     </>
   )
   }

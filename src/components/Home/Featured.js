@@ -9,12 +9,12 @@ const Featured = () => {
     <h5 class="card-title">Featured</h5>
     </div>
     <ul class="list-group list-group-flush ">
-    <li class="list-group-item">Harry Potter and the Sorcerer's Stone</li>
-    <li class="list-group-item">Harry Potter and the Chamber of Secrets</li>
-    <li class="list-group-item">Harry Potter and the Prisoner of Azkaban</li>
-    <li class="list-group-item">Harry Potter and the Goblet of Fire</li>
-    <li class="list-group-item">Harry Potter and the Order of the Phoenix</li>
-    <li class="list-group-item">Harry Potter and the Half - Blood Prince</li>
+      <li class="list-group-item">Harry Potter and the Sorcerer's Stone</li>
+      <li class="list-group-item">Harry Potter and the Chamber of Secrets</li>
+      <li class="list-group-item">Harry Potter and the Prisoner of Azkaban</li>
+      <li class="list-group-item">Harry Potter and the Goblet of Fire</li>
+      <li class="list-group-item">Harry Potter and the Order of the Phoenix</li>
+      <li class="list-group-item">Harry Potter and the Half - Blood Prince</li>
     </ul>
   </div>
 </div>

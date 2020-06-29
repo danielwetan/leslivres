@@ -36,7 +36,6 @@ class MainContent extends Component {
   render() {
     return(
       <>
-        {/* Book section */}
         <div className="content-title">
           <h5 class="card-title">Book Lists</h5>
         </div>

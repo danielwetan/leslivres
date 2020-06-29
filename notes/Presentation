@@ -62,16 +62,6 @@ Project overview
   Kemudian row kedua berisi Sidebar dan Main content 
   Lalu row terakhir berisi footer
 
-Live preview
-* Login / Register
-* CRUD (include borrow flow)
-* Search, sort, pagination
-* Upload Image
-* Logout
-* Responsive
-* Penutupan (share app link)
-
-
 * What is React 
   React advantages:
   - Declarative
@@ -82,3 +72,13 @@ Live preview
 * What is React Virtual DOM 
 * What app ?
 * Layout and Color
+
+Live preview
+* Login / Register
+* CRUD (include borrow flow)
+* Search, sort, pagination
+* Upload Image
+* Logout
+* Responsive
+* Penutupan (share app link)
+

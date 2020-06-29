@@ -1,7 +1,5 @@
 import React from 'react'
 import {
-  Row,
-  Col,
   Button,
   Form,
   FormGroup,
@@ -19,8 +17,8 @@ const AddBook = () => {
         <h1 class="h1">Add New Book</h1>
         </div>
       </div>
-      <Row>
-        <Col md="7">
+      <div class="row">
+        <div className="col-md-6">
           <Form>
             <FormGroup>
               <Label for="title">Title</Label>
@@ -55,14 +53,14 @@ const AddBook = () => {
             <Button>Submit</Button>
           </Form>
 
-        </Col>
-        <Col md="5" style={{marginTop: '200px'}}>
+        </div>
+        <div className="col-md-5" style={{marginTop: '200px'}}>
         <img src={Img}
            alt="Book"
            width="100%"
            height="100%"></img>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </>
   )
 }
