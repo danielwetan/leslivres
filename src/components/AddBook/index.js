@@ -6,11 +6,10 @@ import {
   Form,
   FormGroup,
   Label,
-  Input,
-  FormText
+  Input
 } from 'reactstrap';
 
-import Img from '../../../images/background/svg/reading-time.svg'
+import Img from '../../images/background/svg/reading-time.svg'
 
 const AddBook = () => {
   return(

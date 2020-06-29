@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom'
 const Social = () => {
   return(
     <>
+                <div className="mx-sm-3">
+
+          <div className="content-title">
+          <h6>Follow Us</h6>
+          </div>
             <ul class="list-inline">
               <li class="list-inline-item">
                 <span>
@@ -50,6 +55,7 @@ const Social = () => {
                 </div>
               </li>
             </ul>
+            </div>
     </>
   )
 }

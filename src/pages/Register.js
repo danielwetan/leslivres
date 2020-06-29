@@ -1,15 +1,15 @@
 import React from 'react';
-import NavbarMain from '../components/Navigation/NavbarMain'
-import Sidebar from '../components/Navigation/Sidebar'
-import Footer from '../components/Footer/Footer'
-import Main from '../components/Page/Register/Main';
+import MainNavbar from '../components/Navigation/MainNavbar/index'
+import Sidebar from '../components/Navigation/Sidebar/index'
+import Footer from '../components/Footer/index'
+import Main from '../components/Register/index';
 
 class Register extends React.Component {
   render() {
     return (
       <>
       <div className="container bg-white">
-        <NavbarMain />
+      <MainNavbar />
         <div className="container">
           <div className="row">
             <Sidebar />

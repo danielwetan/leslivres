@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImg from '../../../images/background/svg/speech-to-text.svg';
+import backgroundImg from '../../images/background/svg/speech-to-text.svg';
 
 import axios from 'axios';
 import Product from './Product';
@@ -100,11 +100,11 @@ class Main extends React.Component {
         <form onSubmit={this.handleLogin}>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" type="text" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})}></input>
+            <input class="form-control" type="text" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})}></input>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" id="exampleInputPassword1" type="text" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})}></input>
+            <input class="form-control" type="text" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})}></input>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -120,11 +120,11 @@ class Main extends React.Component {
 
     </div>
 
-    {/* {this.state.products.map((product) => {
+    {this.state.products.map((product) => {
       return <Product key={product.id} title={product.title} description={product.description} />
-    })} */}
+    })}
 
-      <Product/>
+ 
 
     </>
   )

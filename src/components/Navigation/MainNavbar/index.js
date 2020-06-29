@@ -11,8 +11,8 @@ import {
 
 import { Link } from 'react-router-dom'
 
-import Logo from '../../images/logo/logo.png'
-// import ProfileImg from '../../images/profile.jpg'
+import Logo from '../../../images/logo/logo.png'
+import ProfileImg from '../../../images/profile.jpg'
 
 const NavbarMain = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -56,7 +56,7 @@ const NavbarMain = (props) => {
                 {/* <Dropdown isOpen={dropdownOpen} toggle={dropdownToggle} className="profile-dropdown-bg">
                   <DropdownToggle className="profile-dropdown-bg border-0 px-0 py-0">
                   <div class="profile-img-container">
-                    <img src={ProfileImg} alt="Avatar" className="profile-img" width="40px" height="40px"></img>
+                    <img src={ProfileImg} alt="Avatar" className="profile-img"></img>
                   </div>
                   </DropdownToggle>
                   <DropdownMenu>
@@ -76,8 +76,7 @@ const NavbarMain = (props) => {
             <li class="nav-item ">
               <span class="nav-link ">
                   {/* Public User */}
-
-                  <Dropdown caret direction="left" isOpen={dropdownOpen} toggle={dropdownToggle} className="profile-dropdown-bg">
+                  {/* <Dropdown caret direction="left" isOpen={dropdownOpen} toggle={dropdownToggle} className="profile-dropdown-bg">
                   <DropdownToggle className="profile-dropdown-bg border-0 px-0 py-0">
                   <div className="profile-rounded">
                   <span class="fas fa-user"></span>
@@ -90,7 +89,7 @@ const NavbarMain = (props) => {
                     <DropdownItem>Favorite</DropdownItem>
                     <DropdownItem>Logout</DropdownItem>
                   </DropdownMenu>
-                </Dropdown>
+                </Dropdown> */}
 
 
 
@@ -109,20 +108,19 @@ const NavbarMain = (props) => {
 
 
 {/* Logged User */}
-
-
-                {/* <Dropdown isOpen={dropdownOpen} toggle={dropdownToggle} className="profile-dropdown-bg">
-                  <DropdownToggle className="profile-dropdown-bg border-0 px-0 py-0">
-                  <div class="profile-img-container">
-                    <img src={ProfileImg} alt="Avatar" className="profile-img" width="40px" height="40px"></img>
-                  </div>
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>Some Action</DropdownItem>
-                    <DropdownItem>Some Action</DropdownItem>
-                    <DropdownItem>Some Action</DropdownItem>
-                  </DropdownMenu>
-                </Dropdown> */}
+<Dropdown direction="left" isOpen={dropdownOpen} toggle={dropdownToggle} className="profile-dropdown-bg">
+  <DropdownToggle className="profile-dropdown-bg border-0 px-0 py-0">
+  <div class="profile-img-container">
+    <img src={ProfileImg} alt="Avatar" className="profile-img"></img>
+  </div>
+  </DropdownToggle>
+  <DropdownMenu className="mt-4">
+    <Link to="/detail"><DropdownItem>Profile</DropdownItem></Link>
+    <Link to="/add-book"><DropdownItem>Add book</DropdownItem></Link>
+    <DropdownItem>Favorite</DropdownItem>
+    <DropdownItem>Logout</DropdownItem>
+  </DropdownMenu>
+</Dropdown>
 
               </span>
             </li>
