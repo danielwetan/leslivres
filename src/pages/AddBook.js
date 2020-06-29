@@ -8,7 +8,7 @@ import Main from '../components/Page/AddBook/Main';
 const AddBook = () => {
   return(
     <>
-    <div className="container bg-white">
+    <div className="container bg-white ">
       <NavbarMain />
       <div className="container">
         <div className="row">

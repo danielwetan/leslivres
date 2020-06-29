@@ -5,6 +5,8 @@ React DOM
 
   React is JavaScript library for building user interface.
   React dibuat oleh Facebook pada tahun 2013
+  React digunakan untuk membuat Single Page Application
+  Dengan React kita bisa membuat component UI yang reusable
 
   React advantages:
   - Declarative

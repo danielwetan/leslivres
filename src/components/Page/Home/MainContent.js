@@ -7,13 +7,6 @@ import Book from './Book';
 const MainContent = () => {
   return(
     <>
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-        <div className="content-title">
-        <h1 class="h1">Home</h1>
-        </div>
-      </div>
-
-
       {/* Header content */}
        {/* <div className="row">
        <div className="row">
@@ -44,6 +37,9 @@ const MainContent = () => {
       
 
       {/* Book section */}
+      <div className="content-title">
+    <h5 class="card-title">Genre</h5>
+    </div>
       <div className="row mt-3">
         <div className="col-md-2 col-6">
           <Book />

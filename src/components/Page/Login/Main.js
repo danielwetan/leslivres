@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImg from '../../../images/background/svg/book-lover.svg';
+import backgroundImg from '../../../images/background/svg/speech-to-text.svg';
 
 import axios from 'axios';
 import Product from './Product';
@@ -96,14 +96,7 @@ class Main extends React.Component {
 
     {/* Main Section*/}
     <div className="row justify-content-center align-items-center">
-      <div className="col-md-8 col-sm-12">
-      <img src={backgroundImg}
-           className="login-img"
-           alt="Book"
-           width="100%"
-           height="100%"></img>
-      </div>
-      <div className="col-md-4 col-sm-12 my-4">
+    <div className="col-md-4 col-sm-12">
         <form onSubmit={this.handleLogin}>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
@@ -116,6 +109,15 @@ class Main extends React.Component {
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
+
+      <div className="col-md-8 col-sm-12">
+      <img src={backgroundImg}
+           className="login-img"
+           alt="Book"
+           width="100%"
+           height="100%"></img>
+      </div>
+
     </div>
 
     {/* {this.state.products.map((product) => {

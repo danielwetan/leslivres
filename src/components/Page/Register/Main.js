@@ -15,14 +15,8 @@ class Main extends React.Component {
 
     {/* Main Section*/}
     <div className="row justify-content-center align-items-center">
-      <div className="col-md-8 col-sm-12">
-      <img src={backgroundImg}
-           className="register-img"
-           alt="Book"
-           width="100%"
-           height="100%"></img>
-      </div>
-      <div className="col-md-4 col-sm-12 my-4">
+      
+    <div className="col-md-4 col-sm-12 my-4">
         <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
@@ -35,6 +29,14 @@ class Main extends React.Component {
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+      </div>
+      
+      <div className="col-md-8 col-sm-12">
+      <img src={backgroundImg}
+           className="register-img"
+           alt="Book"
+           width="100%"
+           height="100%"></img>
       </div>
     </div>
 

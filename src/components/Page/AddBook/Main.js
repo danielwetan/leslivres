@@ -15,7 +15,6 @@ import Img from '../../../images/background/svg/reading-time.svg'
 const AddBook = () => {
   return(
     <>
-      <div style={{width: "850px"}}>
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
         <div className="content-title">
         <h1 class="h1">Add New Book</h1>
@@ -65,7 +64,6 @@ const AddBook = () => {
            height="100%"></img>
         </Col>
       </Row>
-      </div>
     </>
   )
 }

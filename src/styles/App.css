@@ -13,7 +13,7 @@ body {
   font-family: 'Quicksand';
   font-size: 15px;
   color: #373D3F;
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 .container {
@@ -207,8 +207,3 @@ body {
   color: #373D3F
 } */
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1050px;
-  }
-}
