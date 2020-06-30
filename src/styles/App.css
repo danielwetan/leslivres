@@ -212,3 +212,17 @@ body {
   color: #373D3F
 } */
 
+.smallTitle {
+  font-family: 'Roboto 500';
+}
+
+.book-edit {
+    font-family: 'Roboto 500';
+    font-size: 14px;
+    text-decoration: none;
+    color: gray;
+}
+
+.book-status {
+  font-size: 20px;
+}

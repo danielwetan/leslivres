@@ -4,56 +4,20 @@ import Sidebar from '../components/Navigation/Sidebar/index'
 import Footer from '../components/Footer/index'
 import Main from '../components/DetailBook/index'
 
-import axios from 'axios';
-
 class DetailBook extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      username: '',
-      password: ''
+      title: "",
+      description: "",
+      status: "",
+      author: "",
+      genre: ""
     }
   }
 
-  getAllBooks = () => {
-    const token = localStorage.getItem('mainToken')
-    axios({
-      method: 'GET',
-      url: 'http://localhost:3000/book',
-      header: {
-        Authorization: token
-      }
-    })
-    .then((res) => {
-      // console.log(res)
-    }) // ketika berhasil
-    .catch((err) => {
-      console.log(err)
-    }) // ketika error
-  }
-
   componentDidMount() {
-    this.getAllBooks();
-  }
 
-  handleLogin = (event) => {
-    event.preventDefault()
-    axios({
-      method: 'POST',
-      url: 'http://localhost:3000/auth/login',
-      data: {
-        username: this.state.username,
-        password: this.state.password
-      }
-    })
-    .then((res) => {
-      console.log(res)
-      localStorage.setItem('mainToken', res.data.body[0].mainToken)
-      localStorage.setItem('refreshToken', res.data.body[0].refreshToken)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
   }
 
   render() {
@@ -65,7 +29,13 @@ class DetailBook extends React.Component {
       <div className="row">
         <Sidebar />
         <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4 ">
-          <Main />
+          <Main 
+            title={this.state.title}
+            description={this.state.description}
+            status={this.state.status}
+            author={this.state.author}
+            genre={this.state.genre}
+          />
         </main>
       </div>
     <Footer />
