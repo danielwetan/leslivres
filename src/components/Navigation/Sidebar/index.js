@@ -49,7 +49,7 @@ function Sidebar(props) {
         <ul class="nav flex-column">
           <li class="nav-item">
             <span class="nav-link sidebar-link">
-              <Link to="/detail">
+              <Link to="/book">
               <span><i class="fas fa-info-circle mr-2"></i>About</span>
               </Link>
             </span>

@@ -16,21 +16,11 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route path="/detail">
-            <Detail />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/add-book">
-            <AddBook />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path="/book/:bookId" component={Detail} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/add-book" component={AddBook} />
+          <Route path="/" component={Home} />
         </Switch>
       </Router>
     </>

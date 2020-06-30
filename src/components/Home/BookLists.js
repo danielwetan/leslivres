@@ -7,9 +7,7 @@ class MainContent extends Component {
   constructor() {
     super()
     this.state = {
-      books: [],
-      title: '',
-      author: ''
+      books: []
     }
   }
 
@@ -41,8 +39,10 @@ class MainContent extends Component {
         </div>
         <div className="row mt-3">
           {this.state.books.map((book) => {
-          return <Book key={book.id} title={book.title} author={book.author} />
+          return <Book key={book.id} id={book.id} title={book.title} author={book.author} img={book.img} />
           })}
+          {/* {console.log("###")}
+          {console.log(this.state.books)} */}
         </div>
       </>
     )

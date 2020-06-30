@@ -19,8 +19,29 @@ class AddBook extends Component {
       author: "",
       genre: "",
       description: "",
-      image: ""
+      image: []
     }
+  }
+
+  addNewBook = (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append('title', this.state.title)
+    formData.append('author', this.state.author)
+    formData.append('genre', this.state.genre)
+    formData.append('description', this.state.description)
+    formData.append('image', this.state.image[0])
+    axios({
+      method: 'POST',
+      url: 'http://localhost:3000/book',
+      data: formData
+    })
+    .then((res) => {
+      console.log(res)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
   }
   
   render() {

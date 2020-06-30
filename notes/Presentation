@@ -70,10 +70,10 @@ Project overview
   Who using React ?
 * What is DOM (Document Object Model)
 * What is React Virtual DOM 
-* What app ?
-* Layout and Color
 
 Live preview
+* What app ?
+* Layout and Color
 * Login / Register
 * CRUD (include borrow flow)
 * Search, sort, pagination

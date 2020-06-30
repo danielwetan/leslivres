@@ -1,16 +1,20 @@
 import React from 'react';
 import Img from '../../images/harry-potter.jpg';
 
+import {Link} from 'react-router-dom';
+
 const Book = (props) => {
   return(
     <>
-      <div className="col-md-2 col-sm-6">
+      <div className="col-md-2 col-6">
         <div class="card border-0 mr-auto">
-          <img src={Img} class="card-img-top" alt="..."></img>
+          <img src={`http://localhost:3000/img/${props.img}`} class="card-img-top" alt="..."></img>
           <div class="card-body">
+            <Link to={`/book/${props.id}`}>
             <div class="book-title text-center">
               {props.title}
             </div>
+            </Link>
             <div class="book-author text-center mt-1">
               {props.author}
             </div>

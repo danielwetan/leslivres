@@ -3,21 +3,45 @@ import MainNavbar from '../components/Navigation/MainNavbar/index'
 import Sidebar from '../components/Navigation/Sidebar/index'
 import Footer from '../components/Footer/index'
 import Main from '../components/DetailBook/index'
+import axios from 'axios';
 
 class DetailBook extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      id: this.props.match.params.bookId,
       title: "",
       description: "",
       status: "",
       author: "",
-      genre: ""
+      genre: "",
+      image: ""
     }
   }
 
-  componentDidMount() {
+  getDetailBook = () => {
+    axios({
+      method: "GET",
+      url: `http://localhost:3000/book/${this.state.id}`,
+    })
+    .then((res) => {
+      this.setState({
+        title: res.data.body[0].title,
+        description: res.data.body[0].description,
+        status: res.data.body[0].status,
+        author: res.data.body[0].author,
+        genre: res.data.body[0].genre,
+        image: res.data.body[0].image
+      })
+      console.log(res.data.body[0].image)
+    })
+    .catch((err) => {
+      console.log(err.response)
+    })
+  }
 
+  componentDidMount() {
+    this.getDetailBook()
   }
 
   render() {
@@ -35,7 +59,11 @@ class DetailBook extends React.Component {
             status={this.state.status}
             author={this.state.author}
             genre={this.state.genre}
+            image={this.state.image}
           />
+          {/* {console.log("####")}
+          {console.log(this.props)}
+        <p>{`Page with book id ${this.state.id}`}</p> */}
         </main>
       </div>
     <Footer />
