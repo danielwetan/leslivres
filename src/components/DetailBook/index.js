@@ -1,5 +1,6 @@
-import React, { Component, useState } from 'react'
-import Axios from 'axios'
+import React, { Component, useState, useEffect } from 'react'
+import Axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 import {
   Button,
@@ -18,31 +19,37 @@ const DetailBook = (props) => {
   const [deleteModal, setDeleteModal] = useState(false);
   const toggleDeleteModal = () => setDeleteModal(!deleteModal);
 
+  const [deleteModalSuccess, setDeleteModalSuccess] = useState(false);
+  const toggleDeleteModalSuccess = () => setDeleteModalSuccess(!deleteModalSuccess)
+
   const [updateModal, setUpdateModal] = useState(false);
   const toggleUpdateModal = () => setUpdateModal(!updateModal)
 
   const [borrowModal, setBorrowModal] = useState(false);
   const toggleBorrowModal = () => setBorrowModal(!borrowModal)
 
-  // deleteBook = () => {
-  //   Axios({
-  //     method: 'DELETE',
-  //     url: `http://localhost:3000/book/${this.props.id}`
-  //   })
-  //   .then((res) => {
-  //     // display modal successfully delete
-  //     console.log("Book successfully deleted")
-  //   })
-  //   .catch((err) => {
-  //     console.log(err.response)
-  //   })
-  // }
+  function deleteBook() {
+    Axios({
+      method: 'DELETE',
+      url: `http://localhost:3000/book/${props.id}`
+    })
+    .then((res) => {
+      // display modal successfully delete
+      console.log("Book successfully deleted")
+      redirectToHome()
+    })
+    .catch((err) => {
+      console.log(err.response)
+    })
+  }
 
-  // componentDidUpdate = () => {
-  //   this.deleteBook()
-  // }
+  let history = useHistory()
 
-    return(
+  function redirectToHome() {
+    history.push('/')
+  }
+
+  return(
       <>
         <div class="row mt-4">
           <div class="col-md-3 col-sm-8 mb-3 text-center">
@@ -59,41 +66,38 @@ const DetailBook = (props) => {
           </div>
         </div>
 
-        
-
         {/*Delete Modal*/}
         <div>
           <Modal isOpen={deleteModal} toggle={toggleDeleteModal}>
-            <ModalHeader toggle={toggleDeleteModal} className="border-0 smallTitle">Delete Book</ModalHeader>
+            <ModalHeader toggle={toggleDeleteModal} className="border-0 smallTitle" charCode={<i class="fas fa-times-circle"></i>}></ModalHeader>
             <ModalBody style={{fontSize: "18px"}} >
               Are you sure to delete this book?
             </ModalBody>
             <ModalFooter className="border-0">
-              <Button color="danger" onClick={toggleDeleteModal}>Delete</Button>{' '}
+              <Button color="danger" onClick={deleteBook}>Delete</Button>{' '}
               <Button color="secondary" onClick={toggleDeleteModal}>Cancel</Button>
             </ModalFooter>
           </Modal>
         </div>
 
-        {/* Edit this section!! */}
         {/*Delete Modal Success*/}
-        {/* <div>
-          <Modal isOpen={borrowModal} toggle={toggleBorrowModal}>
-            <ModalHeader toggle={toggleBorrowModal} className="border-0 smallTitle" charCode={<i class="fas fa-times-circle"></i>}></ModalHeader>
+        <div>
+          <Modal isOpen={deleteModalSuccess} toggle={toggleDeleteModalSuccess}>
+            <ModalHeader toggle={toggleDeleteModalSuccess} className="border-0 smallTitle" charCode={<i class="fas fa-times-circle"></i>}></ModalHeader>
             <ModalBody style={{fontSize: "20px"}} className="text-center py-3">
             <div className="modal-icon"><i class="fas fa-chevron-circle-down"></i></div>
               The <b>{props.title}</b><br /> book successfully deleted!
             </ModalBody>
             <ModalFooter className="border-0">
-              <Button color="secondary" onClick={toggleBorrowModal}>Close</Button>
+              <Button color="secondary" onClick={toggleDeleteModalSuccess}>Close</Button>
             </ModalFooter>
           </Modal>
-        </div> */}
+        </div>
 
         {/*Update Modal*/}
         <div>
           <Modal isOpen={updateModal} toggle={toggleUpdateModal}>
-            <ModalHeader toggle={toggleUpdateModal} className="border-0 smallTitle">Update Book</ModalHeader>
+            <ModalHeader toggle={toggleUpdateModal} className="border-0 smallTitle" charCode={<i class="fas fa-times-circle"></i>}>Update Book</ModalHeader>
             <ModalBody>
               <Form>
                 <FormGroup>

@@ -20,14 +20,6 @@ const Home = () => {
           height="100%"></img>
         </div>
       </div>
-      <div className="row">
-        <div className="col-md-6">
-          <Genre />
-        </div>
-        <div className="col-md-6">
-          <Popular />
-        </div>
-      </div>
       <div class="col-md-12">
         <BookLists />
       </div>

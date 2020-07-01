@@ -1,7 +1,7 @@
 import React from 'react';
 import backgroundImg from '../../images/background/svg/speech-to-text.svg';
-
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 class Main extends React.Component {
   constructor(props) {
@@ -13,27 +13,11 @@ class Main extends React.Component {
 
     }
   }
+  
 
-  getAllBooks = () => {
-    const token = localStorage.getItem('mainToken')
-    axios({
-      method: 'GET',
-      url: 'http://localhost:3000/book',
-      header: {
-        Authorization: token
-      }
-    })
-    .then((res) => {
-      console.log(res)
-    }) // ketika berhasil
-    .catch((err) => {
-      console.log(err.response)
-    }) // ketika error
-  }
-
-  componentDidMount() {
-    this.getAllBooks();
-  }
+  // componentDidMount() {
+    
+  // }
 
   handleLogin = (event) => {
     event.preventDefault()
@@ -46,14 +30,19 @@ class Main extends React.Component {
       }
     })
     .then((res) => {
-      console.log(res)
       localStorage.setItem('mainToken', res.data.body[0].mainToken)
       localStorage.setItem('refreshToken', res.data.body[0].refreshToken)
+      console.log(res)
+      // this.goToHome()
     })
     .catch((err) => {
       console.log(err)
     })
   }
+
+  // goToHome() {
+  //   useHistory().push('/')
+  // }
 
   // image upload
   handlePostDefault = (event) => {
@@ -113,32 +102,6 @@ class Main extends React.Component {
            height="100%"></img>
       </div>
     </div>
-
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
     </>
   )
   }
