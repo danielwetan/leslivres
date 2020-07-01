@@ -56,11 +56,11 @@ class AddBook extends Component {
           <div className="col-md-6">  
             <Form>
               <FormGroup>
-                <Label for="title">Title</Label>
+                <Label for="title" className="smallTitle">Title</Label>
                 <Input type="text" name="title" id="title" placeholder="Book Title"/>
               </FormGroup>
               <FormGroup>
-                <Label for="author">Author</Label>
+                <Label for="author" className="smallTitle">Author</Label>
                 <Input type="select" name="author" id="author">
                   <option>Suzanne Colins</option>
                   <option>J.K. Rowling</option>
@@ -69,7 +69,7 @@ class AddBook extends Component {
                 </Input>
               </FormGroup>
               <FormGroup>
-                <Label for="author">Genre</Label>
+                <Label for="author" className="smallTitle">Genre</Label>
                 <Input type="select" name="author" id="author">
                   <option>Fiction</option>
                   <option>Biography</option>
@@ -78,11 +78,11 @@ class AddBook extends Component {
                 </Input>
               </FormGroup>
               <FormGroup>
-                <Label for="description">Description</Label>
+                <Label for="description" className="smallTitle">Description</Label>
                 <Input type="textarea" name="description" id="description" />
               </FormGroup>
               <FormGroup>
-                <Label for="image">Image</Label>
+                <Label for="image" className="smallTitle">Image</Label>
                 <Input type="file" name="image" id="image" />
               </FormGroup>
               <Button>Submit</Button>

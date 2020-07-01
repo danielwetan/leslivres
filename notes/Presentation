@@ -1,12 +1,19 @@
 Introduction
 
-React DOM
 * What is React 
 
   React is JavaScript library for building user interface.
   React dibuat oleh Facebook pada tahun 2013
   React digunakan untuk membuat Single Page Application
   Dengan React kita bisa membuat component UI yang reusable
+
+  Who using React ?
+  - Facebook
+  - WhatsApp
+  - Instagram
+  - Netflix
+  - Dropbox
+  - Discord
 
   React advantages:
   - Declarative
@@ -19,41 +26,40 @@ React DOM
     Kita bisa memecah UI menjadi komponen" kecil untuk mempermudah development.
     Lalu menyusunnya kembali seperti menyusun lego.
   
-  - Learn Once, Write anywhere
+  - Write anywhere
     Kita bisa menggunakan React pada aplikasi tanpa perlu mengubah codebase pada backend.
-    React juga bisa digunakan untuk mobile development menggunakan React Native.
+    Tugas React disisi frontend hanya menampilkan dan mengirim data dari backend
 
-Who using React ?
-- Facebook
-- WhatsApp
-- Instagram
-- Netflix
-- Dropbox
-- Discord
+  - The Ecosytem
+    React dirilis tahun 2013.
+    Dukungan Komunitas yang besar sehingga ketika terjadi problem terkait React, jawaban akan mudah ditemukan.
+    React juga bisa digunakan untuk mobile development menggunakan React Native.
 
 * What is DOM (Document Object Model)
 
   DOM adalah API HTML. Ketika suatu page di akses, browser akan membuat DOM secara otomatis.
   Dengan DOM, Javascript dapat mengakses dengan mengubah element pada HTML 
 
+  Dengan HTML DOM, tampilan website bisa lebih dinamis.
+
 * What is React Virtual DOM 
   Dalam bahasa sederhana React Virtual DOM merupakan salinan dari HTML DOM.
   React Virtual DOM membuat React dapat memanipulasi dan melewati proses dari DOM HTML.
 
+
+* Difference between HTML DOM and React Virtual DOM
   Perbedaan antara HTML DOM dan React Virtual DOM ada di kecepatan.
 
   Dengan React Virtual DOM, ketika terjadi perubahan, browser hanya merender bagian yang berubah. 
   Sedangkan HTML DOM akan mengubah keseluruhan halaman
   
-Project overview
+Live preview
 * What app ?
-  Saya membuat frontend untuk library app menggunakan React.
+  Saya membuat frontend app untuk library menggunakan React.
   Aplikasi ini mempunyai fungsional seperti:
   - CRUD
   - Login / Register
   - Peminjaman Buku
-
-  Untuk fiturnya akan saya demokan nanti setelah presentasi selesai
 
 * Layout and Color
   __GAMBAR LAYOUT___
@@ -62,23 +68,14 @@ Project overview
   Kemudian row kedua berisi Sidebar dan Main content 
   Lalu row terakhir berisi footer
 
-* What is React 
-  React advantages:
-  - Declarative
-  - Component Based
-  - Learn Once, Write anywhere
-  Who using React ?
-* What is DOM (Document Object Model)
-* What is React Virtual DOM 
-
-Live preview
-* What app ?
-* Layout and Color
 * Login / Register
-* CRUD (include borrow flow)
-* Search, sort, pagination
-* Upload Image
-* Logout
-* Responsive
-* Penutupan (share app link)
 
+
+* CRUD (include borrow flow)
+* Upload Image
+
+* Search, sort, pagination
+
+* Responsive
+
+* Penutupan

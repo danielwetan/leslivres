@@ -54,6 +54,7 @@ class DetailBook extends React.Component {
         <Sidebar />
         <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4 ">
           <Main 
+            id={this.state.id}
             title={this.state.title}
             description={this.state.description}
             status={this.state.status}
