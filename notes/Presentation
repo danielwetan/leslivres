@@ -46,12 +46,11 @@ Introduction
   Dalam bahasa sederhana React Virtual DOM merupakan salinan dari HTML DOM.
   React Virtual DOM membuat React dapat memanipulasi dan melewati proses dari DOM HTML.
 
-
 * Difference between HTML DOM and React Virtual DOM
   Perbedaan antara HTML DOM dan React Virtual DOM ada di kecepatan.
 
   Dengan React Virtual DOM, ketika terjadi perubahan, browser hanya merender bagian yang berubah. 
-  Sedangkan HTML DOM akan mengubah keseluruhan halaman
+  Sedangkan HTML DOM akan mengubah keseluruhan halaman.
   
 Live preview
 * What app ?

@@ -31,10 +31,14 @@ class AddBook extends Component {
     formData.append('genre', this.state.genre)
     formData.append('description', this.state.description)
     formData.append('image', this.state.image[0])
+    formData.append('status', 'Available')
     axios({
       method: 'POST',
-      url: 'http://localhost:3000/book',
-      data: formData
+      url: 'http://localhost:3000/book/',
+      data: formData,
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
     })
     .then((res) => {
       console.log(res)
@@ -54,14 +58,14 @@ class AddBook extends Component {
         </div>
         <div class="row">
           <div className="col-md-6">  
-            <Form>
+            <Form onSubmit={this.addNewBook}>
               <FormGroup>
                 <Label for="title" className="smallTitle">Title</Label>
-                <Input type="text" name="title" id="title" placeholder="Book Title"/>
+                <Input type="text" value={this.state.title}  onChange={(e) => this.setState({title: e.target.value})} name="title" id="title" placeholder="Book Title"/>
               </FormGroup>
               <FormGroup>
                 <Label for="author" className="smallTitle">Author</Label>
-                <Input type="select" name="author" id="author">
+                <Input type="select" value="1" name="author" id="author">
                   <option>Suzanne Colins</option>
                   <option>J.K. Rowling</option>
                   <option>Nelson Mandela</option>
@@ -70,7 +74,7 @@ class AddBook extends Component {
               </FormGroup>
               <FormGroup>
                 <Label for="author" className="smallTitle">Genre</Label>
-                <Input type="select" name="author" id="author">
+                <Input type="select" value="1" name="author" id="author">
                   <option>Fiction</option>
                   <option>Biography</option>
                   <option>Classic</option>
@@ -79,13 +83,13 @@ class AddBook extends Component {
               </FormGroup>
               <FormGroup>
                 <Label for="description" className="smallTitle">Description</Label>
-                <Input type="textarea" name="description" id="description" />
+                <Input type="textarea" value={this.state.description} onChange={(e) => this.setState({description: e.target.value})} name="description" id="description" />
               </FormGroup>
               <FormGroup>
                 <Label for="image" className="smallTitle">Image</Label>
-                <Input type="file" name="image" id="image" />
+                <Input type="file" onChange={(e) => this.setState({image: e.target.files})} name="image" id="image" />
               </FormGroup>
-              <Button>Submit</Button>
+              <Button type="submit">Submit</Button>
             </Form>
 
           </div>
