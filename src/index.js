@@ -7,10 +7,13 @@ import '@fortawesome/fontawesome-free/js/all.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App.css';
 
+import {Provider} from 'react-redux';
+import store from './redux/store';
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

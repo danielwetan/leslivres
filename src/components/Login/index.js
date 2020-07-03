@@ -3,46 +3,51 @@ import backgroundImg from '../../images/background/svg/speech-to-text.svg';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
-class Main extends React.Component {
+import {connect} from 'react-redux';
+import { login } from '../../redux/actions/auth';
+
+class Login extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       username: '',
       password: '',
       products: [],
-
     }
   }
   
-
-  // componentDidMount() {
-    
-  // }
-
-  handleLogin = (event) => {
+  handleLogin = event => {
     event.preventDefault()
-    axios({
-      method: 'POST',
-      url: 'http://localhost:3000/auth/login',
-      data: {
-        username: this.state.username,
-        password: this.state.password
-      }
+    const data = {
+      username: this.state.username,
+      password: this.state.password
+    }
+    console.log(data);
+    this.props.login(data).then(() => {
+      // this.props.history.push("/")
     })
-    .then((res) => {
-      localStorage.setItem('mainToken', res.data.body[0].mainToken)
-      localStorage.setItem('refreshToken', res.data.body[0].refreshToken)
-      console.log(res)
-      // this.goToHome()
-    })
-    .catch((err) => {
-      console.log(err)
-    })
+    // axios({
+    //   method: 'POST',
+    //   url: 'http://localhost:3000/auth/login',
+    //   data: {
+    //     username: this.state.username,
+    //     password: this.state.password
+    //   }
+    // })
+    // .then((res) => {
+    //   localStorage.setItem('mainToken', res.data.body[0].mainToken)
+    //   localStorage.setItem('refreshToken', res.data.body[0].refreshToken)
+    //   console.log(res)
+    //   // this.goToHome()
+    // })
+    // .catch((err) => {
+    //   console.log(err)
+    // })
   }
 
-  // goToHome() {
-  //   useHistory().push('/')
-  // }
+  goToHome() {
+    useHistory().push('/')
+  }
 
   // image upload
   handlePostDefault = (event) => {
@@ -69,7 +74,8 @@ class Main extends React.Component {
   }
 
   render() {
-  return(
+    // console.log(this.props.auth)
+    return(
     <>
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
@@ -107,4 +113,11 @@ class Main extends React.Component {
   }
 }
 
-export default Main
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+const mapDispatchToProps = { login }
+
+// Hight order component
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

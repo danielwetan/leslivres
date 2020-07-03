@@ -17,7 +17,7 @@ This app is a second week assignment on the [Arkademy](https://www.arkademy.com/
 1. Clone this repository:
     `git clone https://github.com/danielwetan/national-library`
 2. Install depedencies:
-    `cd national-library & npm install
+    `cd national-library & npm install`
 4. Start the server:
     `npm start`
 

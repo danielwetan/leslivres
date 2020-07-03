@@ -12,6 +12,7 @@ class MainContent extends Component {
   }
 
   getBooks = () => {
+    // const token = this.props.auth.data.token
     axios({
       metod: 'GET',
       url: 'http://localhost:3000/book'
