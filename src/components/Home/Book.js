@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from '../../images/harry-potter.jpg';
 
 import {Link} from 'react-router-dom';
 

@@ -75,6 +75,22 @@ function Sidebar(props) {
               </Link>
             </span>
           </li>
+
+          <li class="nav-item">
+            <span class="nav-link sidebar-link">
+              <Link to="/login">
+              <span>Login</span>
+              </Link>
+            </span>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link sidebar-link">
+              <Link to="/register">
+              <span>Register</span>
+              </Link>
+            </span>
+          </li>
+
           </ul>
         </div>
 

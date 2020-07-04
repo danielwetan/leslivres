@@ -1,7 +1,7 @@
 import React from 'react';
 import backgroundImg from '../../images/background/svg/speech-to-text.svg';
-import axios from 'axios';
-import { useHistory } from 'react-router-dom';
+// import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 import {connect} from 'react-redux';
 import { login } from '../../redux/actions/auth';
@@ -24,7 +24,7 @@ class Login extends React.Component {
     }
     console.log(data);
     this.props.login(data).then(() => {
-      // this.props.history.push("/")
+      this.props.history.push("/")
     })
     // axios({
     //   method: 'POST',
@@ -46,32 +46,32 @@ class Login extends React.Component {
   }
 
   goToHome() {
-    useHistory().push('/')
+    this.props.history.push('/')
   }
 
   // image upload
-  handlePostDefault = (event) => {
-    event.preventDefault();
-    const formData = new FormData();
-    formData.append('name', this.state.name)
-    formData.append('image', this.state.image[0])
-    formData.append('price', this.state.price)
-    formData.append('qty', this.state.qty)
-    axios({
-      method: 'POST',
-      url: 'http://localhost:3000/book',
-      data: formData,
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      }
-    })
-    .then((res) => {
-      console.log(res)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-  }
+  // handlePostDefault = (event) => {
+  //   event.preventDefault();
+  //   const formData = new FormData();
+  //   formData.append('name', this.state.name)
+  //   formData.append('image', this.state.image[0])
+  //   formData.append('price', this.state.price)
+  //   formData.append('qty', this.state.qty)
+  //   axios({
+  //     method: 'POST',
+  //     url: 'http://localhost:3000/book',
+  //     data: formData,
+  //     headers: {
+  //       'Content-Type': 'multipart/form-data',
+  //     }
+  //   })
+  //   .then((res) => {
+  //     console.log(res)
+  //   })
+  //   .catch((err) => {
+  //     console.log(err)
+  //   })
+  // }
 
   render() {
     // console.log(this.props.auth)
@@ -109,15 +109,20 @@ class Login extends React.Component {
       </div>
     </div>
     </>
-  )
+  );
   }
 }
 
 const mapStateToProps = state => ({
   auth: state.auth
-})
+});
 
-const mapDispatchToProps = { login }
+const mapDispatchToProps = { login };
+
+const routePush = withRouter(Login);
 
 // Hight order component
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(routePush);
