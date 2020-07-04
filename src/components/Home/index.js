@@ -25,9 +25,9 @@ const Home = () => {
       <div class="col-md-12">
         <BookLists />
       </div>
-      <div className="col-12 text-right">
+      <div className="col-12 text-right mt-3">
       <Link to="/book">
-        <button className="btn btn-info">
+        <button className="btn btn-outline-dark">
           View more
         </button>
       </Link>

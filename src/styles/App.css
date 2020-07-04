@@ -245,3 +245,7 @@ body {
 .book-link a {
   text-decoration: none;
 }
+
+.img-border{
+  border-radius: 3%;
+}

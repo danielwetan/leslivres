@@ -11,7 +11,7 @@ const Home = () => {
       <div class="col-md-12">
         <BookLists />
       </div>
-      <div className="col-12 text-center align-items-center mt-4">
+      <div className="col-12 text-center align-items-center mt-4 smallTitle">
         <Pagination />
       </div>
     </>
