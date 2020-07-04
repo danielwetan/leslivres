@@ -5,6 +5,8 @@ import Featured from '../Home/Featured'
 // import Genre from '../Home/Genre'
 import backgroundImg from '../../images/background/svg/book-lover.svg'
 
+import { Link } from 'react-router-dom';
+
 const Home = () => {
   return(
     <>
@@ -22,6 +24,13 @@ const Home = () => {
       </div>
       <div class="col-md-12">
         <BookLists />
+      </div>
+      <div className="col-12 text-right">
+      <Link to="/book">
+        <button className="btn btn-info">
+          View more
+        </button>
+      </Link>
       </div>
     </>
   )

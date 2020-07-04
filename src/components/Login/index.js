@@ -94,7 +94,7 @@ class Login extends React.Component {
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" type="text" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})}></input>
+            <input class="form-control" type="password" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})}></input>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>

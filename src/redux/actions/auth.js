@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const login = data => {
+const login = data => {
   return {
     type: 'LOGIN',
     payload: axios({
@@ -12,4 +12,26 @@ export const login = data => {
       }
     })
   }
+}
+
+const register = data => {
+  return {
+    type: 'REGISTER',
+    payload: axios({
+      method: 'post',
+      url: 'http://localhost:3000/auth/register',
+      data: {
+        username: data.username,
+        full_name: data.full_name,
+        email: data.email,
+        password: data.password,
+        role: data.role
+      }
+    })
+  }
+}
+
+export {
+  login,
+  register
 }
