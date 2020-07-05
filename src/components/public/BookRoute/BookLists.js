@@ -11,13 +11,13 @@ const MainContent = (props) => {
   let searchParams = params.get('search');
   let statusParams = params.get('status');
   let pageParams = params.get('page');
+  let genreParams = params.get('genre');
 
   const [books, setBook] = useState([]);
   const [search, setSearch] = useState(searchParams);
   const [status, setStatus] = useState(statusParams)
   const [page, setPage] = useState(pageParams);
-
-
+  const [genre, setGenre] = useState(genreParams);
 
   const getBooks = () => {
     // const token = this.props.auth.data.token
@@ -29,6 +29,7 @@ const MainContent = (props) => {
         search: search,
         status: status,
         page: page,
+        genre: genre
       }
     })
     .then((res) => {
@@ -79,8 +80,8 @@ const MainContent = (props) => {
               </button>
                 <div className="dropdown-menu " aria-labelledby="#dropdownMenuButton">
                   <Link to="/book?genre=biography" className="dropdown-item">Biography</Link>
-                  <Link to="/book?genre=classic" className="dropdown-item">Classic</Link>
-                  <Link to="/book?genre=fiction" className="dropdown-item">Fiction</Link>
+                  <Link to="/book?genre=classic" className="dropdown-item">Classic (Link)</Link>
+                  <a href="/book?genre=classic" className="dropdown-item">Classic (ahref)</a>
                   <Link to="/book?genre=history" className="dropdown-item">History</Link>
                 </div>
             </div>
