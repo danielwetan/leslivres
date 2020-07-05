@@ -69,8 +69,9 @@ const NavbarMain = (props) => {
             </li>
         </ul>
         </div>
-        
-        <Input type="text" name="Search" placeholder="What are you looking for?" className="pl-3 search-bar" />
+        <form>
+        <Input type="text" name="search" placeholder="What are you looking for?" className="pl-3 search-bar" style={{width: "800px"}} />
+        </form>  
         <div class="d-none d-md-block">
         <ul class="navbar-nav px-3">
             <li class="nav-item ">
