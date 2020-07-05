@@ -1,9 +1,9 @@
 import React from 'react';
-import backgroundImg from '../../images/background/svg/folder.svg';
+import backgroundImg from '../../../images/background/svg/folder.svg';
 // import axios from 'axios';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {register} from '../../redux/actions/auth'
+import {register} from '../../../redux/actions/auth'
 
 class Register extends React.Component {
   constructor() {

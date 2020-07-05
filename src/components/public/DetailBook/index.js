@@ -47,7 +47,7 @@ const DetailBook = (props) => {
   function redirectToHome() {
     history.push('/')
   }
-
+  // console.log(props)
   return(
       <>
         <div class="row mt-4">

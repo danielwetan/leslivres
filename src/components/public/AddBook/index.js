@@ -7,7 +7,7 @@ import {
   Input
 } from 'reactstrap';
 
-import Img from '../../images/background/svg/reading-time.svg'
+import Img from '../../../images/background/svg/reading-time.svg'
 
 import axios from 'axios';
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import backgroundImg from '../../images/background/svg/speech-to-text.svg';
+import backgroundImg from '../../../images/background/svg/speech-to-text.svg';
 // import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
 import {connect} from 'react-redux';
-import { login } from '../../redux/actions/auth';
+import { login } from '../../../redux/actions/auth';
 
 class Login extends React.Component {
   constructor(props) {

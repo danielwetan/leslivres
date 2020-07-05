@@ -1,15 +1,15 @@
-import {Home, BookRoute, DetailBook, Login, Register, PageNotFound} from '../pages';
+import {Home, BookRoute, DetailBook, Login, Register, PageNotFound} from '../pages/public';
 
 const PublicRoutes = [
-  {
-    name: 'BookRoute',
-    path: '/book',
-    component: BookRoute
-  },
   {
     name: 'DetailBook',
     path: '/book/:bookId',
     component: DetailBook
+  },
+  {
+    name: 'BookRoute',
+    path: '/book',
+    component: BookRoute
   },
   {
     name: 'Login',

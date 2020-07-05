@@ -1,8 +1,8 @@
 import React from 'react';
-import MainNavbar from '../components/Navigation/MainNavbar/index'
-import Sidebar from '../components/Navigation/Sidebar/index'
-import Footer from '../components/Footer/index'
-import Main from '../components/Home/index';
+import MainNavbar from '../../components/public/Navigation/MainNavbar'
+import Sidebar from '../../components/public/Navigation/Sidebar'
+import Footer from '../../components/public/Footer'
+import Main from '../../components/public/Home';
 
 const Home = () => {
   return (

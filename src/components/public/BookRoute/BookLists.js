@@ -17,19 +17,20 @@ class MainContent extends Component {
     // const token = this.props.auth.data.token
     axios({
       metod: 'GET',
-      url: 'http://localhost:3000/book',
+      url: `http://localhost:3000/book`,
       params: {
         search: '',
-        page: ''
+        status: '',
+        page: '',
       }
     })
     .then((res) => {
       this.setState({        
         books: res.data.body
       })
-      console.log(res.data.body)
-      console.log("###")
-      console.log(this.state.books)
+      // console.log(this.state)
+      // console.log("###")
+      // console.log(this.state)
     })
     .catch((err) => {
       console.log(err.response);

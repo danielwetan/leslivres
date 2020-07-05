@@ -1,8 +1,8 @@
 import React from 'react';
-import MainNavbar from '../components/Navigation/MainNavbar/index'
-import Sidebar from '../components/Navigation/Sidebar/index'
-import Footer from '../components/Footer/index'
-import Main from '../components/DetailBook/index'
+import MainNavbar from '../../components/public/Navigation/MainNavbar'
+import Sidebar from '../../components/public/Navigation/Sidebar'
+import Footer from '../../components/public/Footer'
+import Main from '../../components/public/DetailBook'
 import axios from 'axios';
 
 class DetailBook extends React.Component {
@@ -33,7 +33,6 @@ class DetailBook extends React.Component {
         genre: res.data.body[0].genre,
         image: res.data.body[0].image
       })
-      console.log(res.data.body[0].image)
     })
     .catch((err) => {
       console.log(err.response)

@@ -1,8 +1,8 @@
 import React from 'react';
-import MainNavbar from '../components/Navigation/MainNavbar'
-import Sidebar from '../components/Navigation/Sidebar'
-import Footer from '../components/Footer'
-import Main from '../components/Login';
+import MainNavbar from '../../components/public/Navigation/MainNavbar'
+import Sidebar from '../../components/public/Navigation/Sidebar'
+import Footer from '../../components/public/Footer'
+import Main from '../../components/public/Login';
 
 class Login extends React.Component {
   render() {
