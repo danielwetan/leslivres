@@ -6,18 +6,7 @@ import {connect} from 'react-redux';
 import {register} from '../../../redux/actions/auth'
 
 
-const Register = () => {
-// class Register extends React.Component {
-//   constructor() {
-//     super()
-//     this.state = {
-//       username: '',
-//       full_name: '',
-//       email: '',
-//       password: '',
-//       role: 2
-//     }
-//   }
+const Register = (props) => {
   const [username, setUsername] = useState('');
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
@@ -35,8 +24,8 @@ const Register = () => {
         role: role
     }
     console.log(data)
-    this.props.register(data).then(
-      this.props.history.push("/")
+    props.register(data).then(
+      props.history.push("/")
     )
     // axios({
     //   method: 'post',
@@ -65,22 +54,22 @@ const Register = () => {
     <div className="row justify-content-center align-items-center">
       
     <div className="col-md-4 col-sm-12 my-4">
-        <form onSubmit={this.handleRegister}>
+        <form onSubmit={handleRegister}>
           <div className="form-group">
             <label for="email">Username</label>
             <input className="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)}></input>
           </div>
           <div className="form-group">
             <label for="full-name">Full Name</label>
-            <input className="form-control" type="txt" value={fullName} onChange={(e) => this.setState({full_name: e.target.value})}></input>
+            <input className="form-control" type="txt" value={fullName} onChange={(e) => setFullName(e.target.value)}></input>
           </div>
           <div className="form-group">
             <label for="email">Email</label>
-            <input className="form-control" type="txt" value={this.state.email} onChange={(e) => this.setState({email: e.target.value})}></input>
+            <input className="form-control" type="txt" value={email} onChange={(e) => setEmail(e.target.value)}></input>
           </div>
           <div className="form-group">
             <label for="password">Password</label>
-            <input className="form-control" type="password" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})}></input>
+            <input className="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>

@@ -18,8 +18,8 @@ const Login = props => {
       password: password
     }
     console.log(data);
-    this.props.login(data).then(() => {
-      this.props.history.push("/")
+    props.login(data).then(() => {
+      props.history.push("/")
     })
     // axios({
     //   method: 'POST',
@@ -40,9 +40,9 @@ const Login = props => {
     // })
   }
 
-  const goToHome = () => {
-    props.history.push('/')
-  }
+  // const goToHome = () => {
+  //   props.history.push('/')
+  // }
 
   // image upload
   // handlePostDefault = (event) => {
@@ -81,14 +81,14 @@ const Login = props => {
     {/* Main Section*/}
     <div className="row justify-content-center align-items-center">
     <div className="col-md-4 col-sm-12">
-        <form onSubmit={this.handleLogin}>
+        <form onSubmit={handleLogin}>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input class="form-control" type="text" value={username} onChange={(e) => this.setState({username: e.target.value})}></input>
+            <input class="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)}></input>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" type="password" value={password} onChange={(e) => this.setState({password: e.target.value})}></input>
+            <input class="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>

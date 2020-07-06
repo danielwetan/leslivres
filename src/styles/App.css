@@ -232,11 +232,21 @@ body {
 
 .book-title {
   font-family: 'Roboto 500';
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 12px;
   margin-top: -15px;
   color: #373D3F;
   text-decoration: none;
 }
+
+.book-title:hover {
+  color: gray;
+}
+
+.book-display-link:hover {
+  text-decoration: none;
+}
+
 
 .book-link {
   color: #373D3F;

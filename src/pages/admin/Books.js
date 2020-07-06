@@ -1,10 +1,10 @@
 import React from 'react';
 import MainNavbar from '../../components/admin/Navigation/MainNavbar'
 import Sidebar from '../../components/admin/Navigation/Sidebar'
-import Main from '../../components/admin/Home'
+import Main from '../../components/admin/Books'
 
-const Home = () => {
-  return (
+const Books = () => {
+  return(
     <>
     <div className="container bg-white ">
       <MainNavbar />
@@ -18,7 +18,7 @@ const Home = () => {
       </div>
     </div>  
     </>
-  );
+  )
 }
 
-export default Home;
+export default Books;
