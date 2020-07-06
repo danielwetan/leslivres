@@ -97,6 +97,13 @@ const Sidebar = props => {
               </Link>
             </span>
           </li>
+          <li class="nav-item">
+            <span class="nav-link sidebar-link">
+              <Link to="/admin">
+              <span>Admin</span>
+              </Link>
+            </span>
+          </li>
 
           </ul>
         </div>

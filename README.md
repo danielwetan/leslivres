@@ -23,7 +23,7 @@ This app is a second week assignment on the [Arkademy](https://www.arkademy.com/
 
 ## Features
 - [x] CRUD
-- [ ] Search, Sort, Pagination
+- [x] Search, Sort, Pagination
 - [x] Cors
 - [x] Login/Register with JWT
 - [x] Password hashing
