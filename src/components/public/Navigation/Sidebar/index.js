@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-function Sidebar(props) {
+const Sidebar = props => {
     return (
       <>
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse sidenav navbar-collapse">   
@@ -76,6 +76,13 @@ function Sidebar(props) {
             </span>
           </li>
 
+          <li class="nav-item">
+            <span class="nav-link sidebar-link">
+              <Link to="/profile">
+              <span>Profile</span>
+              </Link>
+            </span>
+          </li>
           <li class="nav-item">
             <span class="nav-link sidebar-link">
               <Link to="/login">

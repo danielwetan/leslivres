@@ -1,14 +1,6 @@
 import React, { Component } from 'react'
-import {
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input
-} from 'reactstrap';
-
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import Img from '../../../images/background/svg/reading-time.svg'
-
 import axios from 'axios';
 
 class AddBook extends Component {

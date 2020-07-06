@@ -1,31 +1,38 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import backgroundImg from '../../../images/background/svg/folder.svg';
 // import axios from 'axios';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {register} from '../../../redux/actions/auth'
 
-class Register extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      username: '',
-      full_name: '',
-      email: '',
-      password: '',
-      role: 2
-    }
-  }
+
+const Register = () => {
+// class Register extends React.Component {
+//   constructor() {
+//     super()
+//     this.state = {
+//       username: '',
+//       full_name: '',
+//       email: '',
+//       password: '',
+//       role: 2
+//     }
+//   }
+  const [username, setUsername] = useState('');
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [role, setRole] = useState(2);
 
   // Post new user to db
-  handleRegister = event => {
+  const handleRegister = event => {
     event.preventDefault()
     const data = {
-        username: this.state.username,
-        full_name: this.state.full_name,
-        email: this.state.email,
-        password: this.state.password,
-        role: this.state.role
+        username: username,
+        full_name: fullName,
+        email: email,
+        password: password,
+        role: role
     }
     console.log(data)
     this.props.register(data).then(
@@ -47,7 +54,6 @@ class Register extends React.Component {
     // )
   }
 
-  render() {
   return(
     <>
     <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
@@ -62,11 +68,11 @@ class Register extends React.Component {
         <form onSubmit={this.handleRegister}>
           <div className="form-group">
             <label for="email">Username</label>
-            <input className="form-control" type="text" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})}></input>
+            <input className="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)}></input>
           </div>
           <div className="form-group">
             <label for="full-name">Full Name</label>
-            <input className="form-control" type="txt" value={this.state.full_name} onChange={(e) => this.setState({full_name: e.target.value})}></input>
+            <input className="form-control" type="txt" value={fullName} onChange={(e) => this.setState({full_name: e.target.value})}></input>
           </div>
           <div className="form-group">
             <label for="email">Email</label>
@@ -91,7 +97,6 @@ class Register extends React.Component {
 
     </>
   )
-  }
 }
 
 const mapStateToProps = state => ({

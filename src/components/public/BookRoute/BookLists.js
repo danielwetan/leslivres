@@ -1,27 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import Book from './Book';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
-const MainContent = (props) => {
-
-  // Get Query params
-  let location = window.location.search;
-  let params = new URLSearchParams(location);
-  let searchParams = params.get('search');
-  let statusParams = params.get('status');
-  let pageParams = params.get('page');
-  let genreParams = params.get('genre');
+const MainContent = () => {
+  const location = useLocation()
+  let params = new URLSearchParams(location.search)
+  let searchParams = params.get('search')
+  let statusParams = params.get('status')
+  let pageParams = params.get('page')
+  let genreParams = params.get('genre')
 
   const [books, setBook] = useState([]);
-  const [search, setSearch] = useState(searchParams);
-  const [status, setStatus] = useState(statusParams)
-  const [page, setPage] = useState(pageParams);
-  const [genre, setGenre] = useState(genreParams);
+  const [search, setSearch] = useState('');
+  const [status, setStatus] = useState('')
+  const [page, setPage] = useState('');
+  const [genre, setGenre] = useState('');
 
   const getBooks = () => {
-    // const token = this.props.auth.data.token
-    console.log(search)
     axios({
       metod: 'GET',
       url: `http://localhost:3000/book`,
@@ -39,15 +35,16 @@ const MainContent = (props) => {
       console.log(err.response);
     })
   }
+  useEffect(() => {
+    setGenre(genreParams)
+    setPage(pageParams)
+    setStatus(statusParams)
+    setSearch(searchParams)
+  }, [genreParams, pageParams, statusParams, searchParams])
 
   useEffect(() => {
-    
     getBooks()
-    // console.log(searchParams)
-    // console.log(statusParams)
-    // console.log(pageParams)
-  }, [])
-
+  }, [search, status, page, genre]) // jika terjadi perubahan pada genre
 
   // equivalent to componentDidMount, fires once when component mounts
   // useEffect(() => {
@@ -91,8 +88,6 @@ const MainContent = (props) => {
           {books.map((book) => {
           return <Book key={book.id} id={book.id} title={book.title} author={book.author} img={book.img} />
           })}
-          {/* {console.log("###")}
-          {console.log(this.state.books)} */}
         </div>
       </>
     )

@@ -1,8 +1,5 @@
 import React from 'react';
 import BookLists from '../BookRoute/BookLists'
-// import Featured from '../Home/Featured'
-// import Popular from '../Home/Popular'
-// import Genre from '../Home/Genre'
 import Pagination from './Pagination';
 
 const Home = () => {

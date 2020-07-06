@@ -1,4 +1,4 @@
-import {Home, BookRoute, DetailBook, Login, Register, PageNotFound} from '../pages/public';
+import {Home, BookRoute, DetailBook, Login, Register, Profile, PageNotFound} from '../pages/public';
 
 const PublicRoutes = [
   {
@@ -28,9 +28,9 @@ const PublicRoutes = [
     component: Home
   },
   {
-    name: 'PageNotFound',
-    path: '*',
-    component: PageNotFound
+    name: 'Profile',
+    path: '/profile',
+    component: Profile
   }
 ]
 

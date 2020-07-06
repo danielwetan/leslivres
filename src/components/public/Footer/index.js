@@ -3,8 +3,7 @@ import Form from './Form'
 import Social from './Social'
 import About from './About'
 
-class Footer extends Component {
-  render() {
+const Footer = () => {
     return(
       <>
         <footer>
@@ -24,7 +23,6 @@ class Footer extends Component {
         </footer>
       </>
     )
-  }
 }
 
 export default Footer;

@@ -12,9 +12,9 @@ const Pagination = () => {
               Previous
             </Link>
           </li>
-          <li className="page-item"><a href="/book?page=1" className="page-link">1</a></li>
-          <li className="page-item"><a href="/book?page=2" className="page-link">2</a></li>
-          <li className="page-item"><a href="/book?page=3" className="page-link">3</a></li>
+          <li className="page-item"><Link to="/book?page=1" className="page-link">1</Link></li>
+          <li className="page-item"><Link to="/book?page=2" className="page-link">2</Link></li>
+          <li className="page-item"><Link to="/book?page=3" className="page-link">3</Link></li>
           <li className="page-item">
             <Link to="/" className="page-link">
               Next
