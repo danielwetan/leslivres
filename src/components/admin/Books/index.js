@@ -1,9 +1,13 @@
 import React from 'react';
+import AddBook from './Modals/AddBook'
+import BookList from './BookList';
 
 const Books = () => {
   return(
     <>
-      <p>Hello this is Books page</p>
+      <AddBook />
+      <hr/>
+      <BookList />
     </>
   )
 }
