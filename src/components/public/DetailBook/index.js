@@ -14,7 +14,7 @@ import {
   Input
 } from 'reactstrap';
 
-const DetailBook = (props) => {
+const DetailBook = props => {
   const [deleteModal, setDeleteModal] = useState(false);
   const toggleDeleteModal = () => setDeleteModal(!deleteModal);
 
@@ -48,19 +48,21 @@ const DetailBook = (props) => {
     history.push('/')
   }
   // console.log(props)
+  console.log(props)
   return(
       <>
         <div class="row mt-4">
           <div class="col-md-3 col-sm-8 mb-3 text-center">
-            <img src={`http://localhost:3000/img/${props.image}`} class="card-img-top" alt="..."></img>
+            <img src={`http://localhost:3000/img/${props.img}`} class="card-img-top" alt="..."></img>
             <button class="btn btn-outline-secondary mt-2 px-5" onClick={toggleBorrowModal}><i class="fas fa-truck"></i> Borrow</button>
           </div>
+
           <div class="col-md-6 col-sm-12 mb-3">
             <div class="card border-0">
               <h5 class="mb- detail-book-title">{props.title}</h5>
               <div className="book-status mb-1"><span class="badge bg-lightgray ">{props.status}</span> 
-              <span class="badge bg-primary text-white mx-2 ">Fiction</span> 
-              <span class="badge bg-info text-white ">J.K. Rowling</span> 
+              <span class="badge bg-primary text-white mx-2 ">{props.genre}</span> 
+              <span class="badge bg-info text-white ">{props.author}</span> 
               <div>
                 <button className="book-edit btn bg-white" onClick={toggleUpdateModal}><i class="fas fa-edit"></i> Edit</button>
                 <button className="book-edit btn bg-white" data-toggle="modal" data-target="#deleteBook" onClick={toggleDeleteModal}><i class="fas fa-trash"></i> Delete</button></div>

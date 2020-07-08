@@ -15,7 +15,7 @@ class DetailBook extends React.Component {
       status: "",
       author: "",
       genre: "",
-      image: ""
+      img: ""
     }
   }
 
@@ -31,7 +31,7 @@ class DetailBook extends React.Component {
         status: res.data.body[0].status,
         author: res.data.body[0].author,
         genre: res.data.body[0].genre,
-        image: res.data.body[0].image
+        img: res.data.body[0].img
       })
     })
     .catch((err) => {
@@ -59,7 +59,7 @@ class DetailBook extends React.Component {
             status={this.state.status}
             author={this.state.author}
             genre={this.state.genre}
-            image={this.state.image}
+            img={this.state.img}
           />
           {/* {console.log("####")}
           {console.log(this.props)}
