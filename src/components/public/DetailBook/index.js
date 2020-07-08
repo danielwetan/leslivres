@@ -53,13 +53,18 @@ const DetailBook = (props) => {
         <div class="row mt-4">
           <div class="col-md-3 col-sm-8 mb-3 text-center">
             <img src={`http://localhost:3000/img/${props.image}`} class="card-img-top" alt="..."></img>
-            <button class="btn btn-outline-secondary mt-2 px-5 smallTitle" onClick={toggleBorrowModal}><i class="fas fa-truck"></i> Borrow</button>
+            <button class="btn btn-outline-secondary mt-2 px-5" onClick={toggleBorrowModal}><i class="fas fa-truck"></i> Borrow</button>
           </div>
           <div class="col-md-6 col-sm-12 mb-3">
             <div class="card border-0">
-              <h5 class="mb- smallTitle">{props.title}</h5>
+              <h5 class="mb- detail-book-title">{props.title}</h5>
               <div className="book-status mb-1"><span class="badge bg-lightgray ">{props.status}</span> 
-              <button className="book-edit btn bg-white" onClick={toggleUpdateModal}><i class="fas fa-edit"></i> Edit</button>|<button className="book-edit btn bg-white" data-toggle="modal" data-target="#deleteBook" onClick={toggleDeleteModal}><i class="fas fa-trash"></i> Delete</button></div>
+              <span class="badge bg-primary text-white mx-2 ">Fiction</span> 
+              <span class="badge bg-info text-white ">J.K. Rowling</span> 
+              <div>
+                <button className="book-edit btn bg-white" onClick={toggleUpdateModal}><i class="fas fa-edit"></i> Edit</button>
+                <button className="book-edit btn bg-white" data-toggle="modal" data-target="#deleteBook" onClick={toggleDeleteModal}><i class="fas fa-trash"></i> Delete</button></div>
+              </div>
               <p>{props.description}</p>
             </div>
           </div>

@@ -6,7 +6,7 @@ const EditBookModal = props => {
   const [editBookModal, setEditBookModal] = useState(false);
   const toggle = () => setEditBookModal(!editBookModal);
 
-  const [title, setTitle] = useState('')
+  const [title, setTitle] = useState(`${props.title}`)
   const [author, setAuthor] = useState('1')
   const [genre, setGenre] = useState('1')
   const [description, setDescription] = useState('')
@@ -40,7 +40,7 @@ const EditBookModal = props => {
 
   return(
     <>
-      <Button onClick={toggle} color="blue" className="btn btn-outline-info">Edit</Button>
+      <Button onClick={toggle} color="blue" className="btn btn-outline-info mx-2">Edit</Button>
       {/******************/}
       <Modal isOpen={editBookModal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Edit Book</ModalHeader>
@@ -48,7 +48,7 @@ const EditBookModal = props => {
         <Form onSubmit={EditBook}>
               <FormGroup>
                 <Label for="title" className="smallTitle">Name</Label>
-                <Input type="text" onChange={(e) => setTitle(e.target.value)} name="title" id="title" placeholder="Book Title"/>
+                <Input type="text" value={title} onChange={(e) => setTitle(e.target.value)} name="title" id="title" placeholder=""/>
               </FormGroup>
               <FormGroup>
                 <Label for="author" className="smallTitle">Author</Label>

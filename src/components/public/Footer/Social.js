@@ -7,7 +7,7 @@ const Social = () => {
     <>
       <div className="mx-sm-3">
         <div className="content-title">
-        <h6>Follow Us</h6>
+        <h6 className="footer-title">Follow Us</h6>
         </div>
           <ul class="list-inline">
             <li class="list-inline-item">

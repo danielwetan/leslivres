@@ -1,13 +1,12 @@
 import React from 'react';
-import MainNavbar from '../../components/public/Navigation/MainNavbar'
-import Sidebar from '../../components/public/Navigation/Sidebar'
-import Footer from '../../components/public/Footer'
-import Main from '../../components/public/Home';
+import MainNavbar from '../../components/admin/Navigation/MainNavbar'
+import Sidebar from '../../components/admin/Navigation/Sidebar'
+import Main from '../../components/admin/Authors'
 
-const Home = () => {
+const Authors = () => {
   return (
     <>
-    <div className="container body-bg ">
+    <div className="container bg-white ">
       <MainNavbar />
       <div className="container">
         <div className="row">
@@ -16,11 +15,10 @@ const Home = () => {
             <Main />
           </main>
         </div>
-      <Footer />
       </div>
     </div>  
     </>
   );
 }
 
-export default Home;
+export default Authors;

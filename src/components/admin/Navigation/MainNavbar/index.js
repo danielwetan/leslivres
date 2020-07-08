@@ -5,8 +5,7 @@ import {
   Dropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-  Input
+  DropdownItem
 } from 'reactstrap';
 
 import { Link } from 'react-router-dom'

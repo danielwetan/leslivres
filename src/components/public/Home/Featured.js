@@ -6,7 +6,7 @@ const Featured = () => {
 <div class="card border-0">
   <div class="card-body">
     <div className="content-title">
-    <h5 class="card-title">Featured</h5>
+    <h6 class="card-title home-title">Featured</h6>
     </div>
     <ul class="list-group list-group-flush ">
       <li class="list-group-item">Harry Potter and the Sorcerer's Stone</li>

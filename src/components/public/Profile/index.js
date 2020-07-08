@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import backgroundImg from '../../../images/background/svg/speech-to-text.svg';
-import { withRouter } from 'react-router-dom';
+import React from 'react';
+// import { withRouter } from 'react-router-dom';
 
 const Profile = () => {
   return(

@@ -9,7 +9,6 @@ import { login } from '../../../redux/actions/auth';
 const Login = props => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [products, setProducts] = useState('');
   
   const handleLogin = event => {
     event.preventDefault()

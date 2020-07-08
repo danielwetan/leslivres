@@ -25,11 +25,11 @@ const MainContent = () => {
   return(
     <>
       <div className="content-title">
-        <h5 class="card-title">Book Lists</h5>
+        <h6 class="card-title home-title">Book Lists</h6>
       </div>
       <div className="row mt-3">
         {books.map((book) => {
-        return <Book key={book.id} id={book.id} title={book.title} author={book.author} img={book.img} />
+        return <Book key={book.id} id={book.id} title={book.title} genre={book.genre} author={book.author} img={book.img} />
         })}
       </div>
     </>

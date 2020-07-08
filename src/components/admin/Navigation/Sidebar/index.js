@@ -36,13 +36,6 @@ const Sidebar = props => {
                   </Link>
                 </span>
               </li>
-              <li class="nav-item">
-                <span class="nav-link sidebar-link">
-                  <Link to="/admin/users">
-                  <span><i class="fas fa-user mr-2"></i>Users</span>
-                  </Link>
-                </span>
-              </li>
               </ul>
             </div>        
           </div>
