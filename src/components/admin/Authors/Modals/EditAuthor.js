@@ -29,7 +29,7 @@ const EditAuthor = props => {
 
   return(
     <>
-      <Button onClick={toggle} color="blue" className="btn-outline-info mx-2">Edit</Button>
+      <span onClick={toggle} className="book-edit btn bg-white"><i class="fas fa-edit"></i></span>
 
       <Modal isOpen={editModal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Edit Author</ModalHeader>

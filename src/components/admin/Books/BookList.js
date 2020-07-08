@@ -22,14 +22,24 @@ const BookList = () => {
     getBook()
   }, [])
 
-
   return(
     <>
-
-      {books.map((book) => {
-        return <Book key={book.id} id={book.id} title={book.title} author={book.author} img={book.img} status={book.status} />
-      })}
-
+      <table className="table table-responsive">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Status</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        {books.map((book) => {
+        return <Book key={book.id} id={book.id} title={book.title} author={book.author} genre={book.genre} img={book.img} status={book.status} />
+        })}
+      </table>
     </>
   )
 }

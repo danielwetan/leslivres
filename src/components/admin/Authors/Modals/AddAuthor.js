@@ -30,7 +30,8 @@ const AddAuthor = () => {
 
   return(
     <>
-      <Button onClick={toggle} color="red" className="btn btn-outline-danger">Add Author</Button>
+      <span onClick={toggle} className="book-edit btn bg-white"><i class="fas fa-plus-circle"></i> Add Author</span>
+
 
       <Modal isOpen={addModal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Edit Book</ModalHeader>

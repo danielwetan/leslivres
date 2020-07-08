@@ -27,9 +27,20 @@ const AuthorList = () => {
 
   return(
     <>
+        <table className="table table-responsive">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
       {author.map((author) => {
         return <Author key={author.id} id={author.id} name={author.name} />
       })}
+      </table>
+
     </>
   )
 }

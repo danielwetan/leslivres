@@ -6,7 +6,6 @@ const Genres = () => {
   return(
     <>
       <AddGenre />
-      <hr></hr>
       <GenreList />
     </>
   )

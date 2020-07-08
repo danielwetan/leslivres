@@ -4,7 +4,14 @@ import EditGenre from './Modals/EditGenre';
 const Genre = props => {
   return(
     <>
-      <p>{props.name} <EditGenre id={props.id} name={props.name} /> <DeleteGenre id={props.id} /></p>
+        <tbody>
+          <tr>
+            <th scope="row">{props.id}</th>
+            <th>{props.name}</th>
+            <th><EditGenre id={props.id} name={props.name} /></th>
+            <th> <DeleteGenre id={props.id} /></th>
+          </tr>
+        </tbody>    
     </>
   )
 }

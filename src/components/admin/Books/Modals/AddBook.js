@@ -40,7 +40,8 @@ const AddBook = () => {
 
   return(
     <>
-        <Button onClick={toggleAddBookModal}>Add book</Button>
+        {/* <Button onClick={toggleAddBookModal}>Add book</Button> */}
+        <span onClick={toggleAddBookModal} className="book-edit btn bg-white"><i class="fas fa-plus-circle"></i> Add Book</span>
         {/*****************/}
         <Modal isOpen={addBookModal} toggle={toggleAddBookModal}>
         <ModalHeader toggle={toggleAddBookModal}>Edit Book</ModalHeader>

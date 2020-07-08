@@ -40,7 +40,7 @@ const EditBookModal = props => {
 
   return(
     <>
-      <Button onClick={toggle} color="blue" className="btn btn-outline-info mx-2">Edit</Button>
+      <span onClick={toggle} className="book-edit btn bg-white"><i class="fas fa-edit"></i></span>
       {/******************/}
       <Modal isOpen={editBookModal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Edit Book</ModalHeader>

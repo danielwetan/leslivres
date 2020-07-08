@@ -30,10 +30,10 @@ const AddGenre = () => {
 
   return(
     <>
-      <Button onClick={toggle} color="red" className="btn btn-outline-danger">Add Genre</Button>
+      <span onClick={toggle} className="book-edit btn bg-white"><i class="fas fa-plus-circle"></i> Add Genre</span>
 
       <Modal isOpen={addModal} toggle={toggle}>
-        <ModalHeader toggle={toggle}>Edit Book</ModalHeader>
+        <ModalHeader toggle={toggle}>Add Genre</ModalHeader>
         <ModalBody>
             <Form onSubmit={AddNewGenre}>
             <FormGroup>

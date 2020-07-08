@@ -6,7 +6,6 @@ const Books = () => {
   return(
     <>
       <AddBook />
-      <hr/>
       <BookList />
     </>
   )

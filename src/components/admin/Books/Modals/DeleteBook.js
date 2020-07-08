@@ -21,7 +21,7 @@ const DeleteBookModal = props => {
 
   return(
     <>
-      <Button onClick={toggle} color="red" className="btn btn-outline-danger">Delete</Button>
+      <span onClick={toggle} className="book-edit btn bg-white"><i class="fas fa-trash"></i></span>
       {/****************/}
       <Modal isOpen={deleteModal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Delete Book</ModalHeader>

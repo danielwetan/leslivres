@@ -6,7 +6,6 @@ const Authors = () => {
   return(
     <>
       <AddAuthor />
-      <hr></hr>
       <AuthorList />
     </>
   )

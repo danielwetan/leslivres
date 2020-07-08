@@ -4,7 +4,14 @@ import EditAuthor from './Modals/EditAuthor';
 const Author = props => {
   return(
     <>
-      <p>{props.name} <EditAuthor id={props.id} name={props.name} /> <DeleteAuthor id={props.id} /></p>
+        <tbody>
+          <tr>
+            <th scope="row">{props.id}</th>
+            <th>{props.name}</th>
+            <th><EditAuthor id={props.id} name={props.name} /></th>
+            <th> <DeleteAuthor id={props.id} /></th>
+          </tr>
+        </tbody>
     </>
   )
 }

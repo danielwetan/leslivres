@@ -6,11 +6,17 @@ import DeleteBook from './Modals/DeleteBook';
 const Book = props => {
   return(
     <>
-      <p>
-        {props.title}
-        <EditBook id={props.id} title={props.title} author={props.author} genre={props.genre} description={props.description} image={props.image} status={props.status} />
-        <DeleteBook id={props.id} />
-      </p>     
+        <tbody>
+          <tr>
+            <th scope="row">{props.id}</th>
+            <th>{props.title}</th>
+            <th>{props.author}</th>
+            <th>{props.genre}</th>
+            <th><span class="badge bg-lightgray admin-book-status">{props.status}</span></th>
+            <th><EditBook id={props.id} title={props.title} author={props.author} genre={props.genre} description={props.description} image={props.image} status={props.status} /></th>
+            <th><DeleteBook id={props.id} /></th>
+          </tr>
+        </tbody>  
     </> 
   )
 }

@@ -27,9 +27,19 @@ const GenreList = () => {
 
   return(
     <>
+        <table className="table table-responsive">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
       {genre.map((genre) => {
         return <Genre key={genre.id} id={genre.id} name={genre.name} />
       })}
+      </table>
     </>
   )
 }
