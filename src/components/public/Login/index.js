@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import backgroundImg from '../../../images/background/svg/speech-to-text.svg';
-// import axios from 'axios';
+import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
 import {connect} from 'react-redux';
@@ -12,36 +12,40 @@ const Login = props => {
   
   const handleLogin = event => {
     event.preventDefault()
-    const data = {
-      username: username,
-      password: password
-    }
-    console.log(data);
-    props.login(data).then(() => {
-      props.history.push("/")
+
+    // LOGIN USING REDUX
+    // const data = {
+    //   username: username,
+    //   password: password
+    // }
+    // console.log(data);
+    // props.login(data).then(() => {
+    //   props.history.push("/")
+    // })
+
+    axios({
+      method: 'POST',
+      url: 'http://localhost:3000/auth/login',
+      data: {
+        username: username,
+        password: password
+      }
     })
-    // axios({
-    //   method: 'POST',
-    //   url: 'http://localhost:3000/auth/login',
-    //   data: {
-    //     username: this.state.username,
-    //     password: this.state.password
-    //   }
-    // })
-    // .then((res) => {
-    //   localStorage.setItem('mainToken', res.data.body[0].mainToken)
-    //   localStorage.setItem('refreshToken', res.data.body[0].refreshToken)
-    //   console.log(res)
-    //   // this.goToHome()
-    // })
-    // .catch((err) => {
-    //   console.log(err)
-    // })
+    .then((res) => {
+      localStorage.setItem('mainToken', res.data.body[0].mainToken)
+      localStorage.setItem('refreshToken', res.data.body[0].refreshToken)
+      console.log(res)
+      goToHome()
+      // this.goToHome()
+    })
+    .catch((err) => {
+      console.log(err)
+    })
   }
 
-  // const goToHome = () => {
-  //   props.history.push('/')
-  // }
+  const goToHome = () => {
+    props.history.push('/')
+  }
 
   // image upload
   // handlePostDefault = (event) => {
@@ -89,7 +93,7 @@ const Login = props => {
             <label for="exampleInputPassword1">Password</label>
             <input class="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-blue">Login</button>
         </form>
       </div>
 

@@ -21,7 +21,7 @@ const AddGenre = () => {
       } 
     })
     .then(() => {
-      window.location.replace('http://localhost:5000/admin');
+      window.location.replace('http://localhost:5000/admin/genres');
     })
     .catch((err) => {
       console.log(err.response);
@@ -40,7 +40,7 @@ const AddGenre = () => {
               <Label for="title" className="smallTitle">Genre Name</Label>
               <Input type="text" onChange={(e) => setGenreName(e.target.value)} name="title" id="title" placeholder="Genre Name"/>
             </FormGroup>
-            <Button color="danger" type="submit">Submit</Button>
+            <Button color="danger" type="submit" className="btn-blue">Submit</Button>
           </Form>
         </ModalBody>
       </Modal>

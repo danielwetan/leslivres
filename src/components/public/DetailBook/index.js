@@ -47,6 +47,16 @@ const DetailBook = props => {
   function redirectToHome() {
     history.push('/')
   }
+
+  const [status, setStatus] = useState('Available')
+
+  const statusCheck = () => {
+    if(toggleBorrowModal) {
+      setStatus('Not Available')
+    }
+    toggleBorrowModal()
+  }
+  
   // console.log(props)
   console.log(props)
   return(
@@ -54,18 +64,18 @@ const DetailBook = props => {
         <div class="row mt-4">
           <div class="col-md-3 col-sm-8 mb-3 text-center">
             <img src={`http://localhost:3000/img/${props.img}`} class="card-img-top" alt="..."></img>
-            <button class="btn btn-outline-secondary mt-2 px-5" onClick={toggleBorrowModal}><i class="fas fa-truck"></i> Borrow</button>
+            <button class="btn btn-blue mt-2 px-5" onClick={statusCheck}><i class="fas fa-truck"></i> Borrow</button>
           </div>
 
           <div class="col-md-6 col-sm-12 mb-3">
             <div class="card border-0">
               <h5 class="mb- detail-book-title">{props.title}</h5>
-              <div className="book-status mb-1"><span class="badge bg-lightgray ">{props.status}</span> 
+              <div className="book-status mb-1"><span class="badge bg-lightgray ">
+                {/* {props.status} */}
+                {status}
+                </span> 
               <span class="badge bg-primary text-white mx-2 ">{props.genre}</span> 
               <span class="badge bg-info text-white ">{props.author}</span> 
-              <div>
-                <button className="book-edit btn bg-white" onClick={toggleUpdateModal}><i class="fas fa-edit"></i> Edit</button>
-                <button className="book-edit btn bg-white" data-toggle="modal" data-target="#deleteBook" onClick={toggleDeleteModal}><i class="fas fa-trash"></i> Delete</button></div>
               </div>
               <p>{props.description}</p>
             </div>
@@ -154,7 +164,7 @@ const DetailBook = props => {
               The <b>{props.title}</b><br /> book successfully borrowed!
             </ModalBody>
             <ModalFooter className="border-0">
-              <Button color="secondary" onClick={toggleBorrowModal}>Close</Button>
+              <Button color="secondary" className="btn-blue" onClick={toggleBorrowModal}>Close</Button>
             </ModalFooter>
           </Modal>
         </div>

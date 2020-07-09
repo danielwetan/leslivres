@@ -10,7 +10,7 @@ const EditBookModal = props => {
   const [author, setAuthor] = useState('1')
   const [genre, setGenre] = useState('1')
   const [description, setDescription] = useState('')
-  const [image, setImage] = useState([])
+  const [img, setImg] = useState([])
   const [status, setStatus] = useState('Available')
 
   const EditBook = event => {
@@ -20,7 +20,7 @@ const EditBookModal = props => {
     formData.append('author', author);
     formData.append('genre', genre);
     formData.append('description', description);
-    formData.append('image', image);
+    formData.append('img', img);
     formData.append('status', status);
     axios({
       method: 'PUT',
@@ -73,15 +73,12 @@ const EditBookModal = props => {
                 <Input type="textarea" onChange={(e) => setDescription(e.target.value)} name="description" id="description" />
               </FormGroup>
               <FormGroup>
-                <Label for="image" className="smallTitle">Image</Label>
-                <Input type="file" onChange={(e) => setImage(e.target.files)} name="image" id="image" />
+                <Label for="img" className="smallTitle">Image</Label>
+                <Input type="file" onChange={(e) => setImg(e.target.files)} name="img" id="img" />
               </FormGroup>
-              <Button color="danger" type="submit">Submit</Button>
+              <Button color="danger" type="submit" className="btn-blue">Submit</Button>
             </Form>
         </ModalBody>
-        <ModalFooter>
-          <Button color="primary" onClick={toggle}>Cancel</Button>
-        </ModalFooter>
       </Modal>
     </>
   )

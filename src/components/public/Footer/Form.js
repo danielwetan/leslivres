@@ -11,7 +11,7 @@ const Form = () => {
           <input type="email" class="form-control" id="inputPassword2" placeholder="Enter Your Email"></input>
         </div>
       </form>
-      <button type="button" class="btn bg-lightgray mx-sm-3 mt-1">Subscribe</button>
+      <button type="button" class="btn btn-blue mx-sm-3 mt-1">Subscribe</button>
     </>
   )
 }

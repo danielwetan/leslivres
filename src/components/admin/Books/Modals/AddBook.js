@@ -44,7 +44,7 @@ const AddBook = () => {
         <span onClick={toggleAddBookModal} className="book-edit btn bg-white"><i class="fas fa-plus-circle"></i> Add Book</span>
         {/*****************/}
         <Modal isOpen={addBookModal} toggle={toggleAddBookModal}>
-        <ModalHeader toggle={toggleAddBookModal}>Edit Book</ModalHeader>
+        <ModalHeader toggle={toggleAddBookModal}>Add Book</ModalHeader>
         <ModalBody>
             <Form onSubmit={AddNewBook}>
             <FormGroup>
@@ -77,13 +77,10 @@ const AddBook = () => {
               <Label for="image" className="smallTitle">Image</Label>
               <Input type="file" onChange={(e) => setImage(e.target.files)} name="image" id="image" />
             </FormGroup>
-            <Button color="danger" type="submit">Submit</Button>
+            <Button color="danger" type="submit" className="btn-blue">Submit</Button>
 
           </Form>
         </ModalBody>
-        <ModalFooter>
-          <Button color="primary" onClick={toggleAddBookModal}>Cancel</Button>
-        </ModalFooter>
       </Modal>
       </>
   )

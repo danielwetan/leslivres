@@ -39,7 +39,7 @@ const EditAuthor = props => {
               <Label for="title" className="smallTitle">Author Name</Label>
               <Input type="text" onChange={(e) => setAuthorName(e.target.value)} name="name" id="name" placeholder="Author Name"/>
             </FormGroup>
-            <Button color="danger" type="submit">Submit</Button>
+            <Button color="danger" type="submit" className="btn-blue">Submit</Button>
           </Form>
         </ModalBody>
       </Modal>

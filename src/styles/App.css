@@ -14,6 +14,11 @@
 }
 
 @font-face {
+	font-family: 'Montserrat Bold';
+	src: url(montserrat-bold.woff2) format('woff2');
+}
+
+@font-face {
 	font-family: 'Rubik';
 	src: url(rubik.woff2) format('woff2');
 }
@@ -35,8 +40,73 @@ body {
   color: #373D3F;
 }
 
+.main-section {
+  background-color: #e0dede;
+}
+
+.main-section-heading {
+  font-family: 'Montserrat Bold';
+  font-size: 55px;
+  line-height: 70px;
+}
+
+.main-section-text {
+  font-family: 'Quicksand';
+  font-size: 20px;
+}
+
+.main-section-btn {
+  background-color: #004380;
+  color: white;
+  font-size: 15px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+.main-section-btn:hover {
+  background-color: #004380;
+  color: lightgray;
+}
+
+
+.nav-text {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-brand-text {
+  font-family: 'Montserrat Bold';
+  font-size: 28px;
+  font-weight: 600;
+  text-decoration: none;
+  color: gray;
+}
+
+.brand-a {
+  color: #295b97;
+}
+
+.brand-b {
+  color: #373D3F;
+}
+
 .smallTitle {
   font-family: 'Montserrat';
+}
+
+.btn-blue {
+  background-color: #004380;
+  color: white;
+  font-size: 15px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+.btn-blue:hover {
+  background-color: #004380;
+  color: lightgray;
 }
 
 .serif-title {
@@ -44,8 +114,8 @@ body {
 }
 
 .detail-book-title {
-  font-family: 'Crimson Text';
-  font-size: 25px;
+  font-family: 'Montserrat Bold';
+  font-size: 20px;
 }
 
 .container {
@@ -64,9 +134,16 @@ body {
   color: #373D3F;
 }
 
+.navbar-bg {
+  background-color: white;
+  box-shadow: 0px 1px 5px 0px #888;
+}
+
 .sidebar-title {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat Bold';
+  font-weight: 600;
   font-size: 13px;
+  color: #373D3F !important;
 }
 
 .sidebar-body {
@@ -74,7 +151,7 @@ body {
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  color: gray;
+  color: #373D3F;
 }
 
 .sidebar-body a {
@@ -103,8 +180,8 @@ body {
 
 /* Footer */
 .social-rounded {
-  background-color: lightgray;
-  color: gray;
+  background-color: #004380;
+  color: white;
   width: 50px;
   height: 50px;
   padding-top: 7px;
@@ -114,12 +191,23 @@ body {
 }
 
 .social-rounded a {
-  color: gray
+  color: white
 }
 
 .social-rounded a:hover {
-  color: #373D3F
+  color: lightgray
 }
+
+.btn-footer {
+  background-color: #004380;
+  color: white
+}
+
+.btn-footer:hover {
+  background-color: #004380;
+  color: lightgray
+}
+
 
 /* Profile */
 .profile-rounded {
@@ -138,7 +226,7 @@ body {
 }
 
 .profile-rounded:hover {
-  color: #373D3F
+  color: lightgray
 }
 
 /*
@@ -240,12 +328,20 @@ body {
   color: #373D3F
 } */
 
+.pagination-text {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #004380;
+}
 
 .book-edit {
-    font-family: 'Roboto 500';
+    font-family: 'Montserrat';
     font-size: 14px;
+    font-weight: 600;
     text-decoration: none;
-    color: gray;
+    color: #004380;
 }
 
 .book-status {
@@ -303,4 +399,9 @@ body {
 
 .admin-book-status {
   font-size: 14px
+}
+
+.card-title {
+  font-family: 'Montserrat Bold';
+
 }

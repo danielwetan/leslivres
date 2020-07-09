@@ -4,7 +4,9 @@ const notFound404 = () => {
     // console.log(this.props.auth)
     return(
     <>
-      <p>404 Not Found</p>
+      <div className="text-center mt-5">
+        <p>404 Not Found</p>
+      </div>
     </>
   );
 }

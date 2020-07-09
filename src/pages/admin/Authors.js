@@ -1,5 +1,5 @@
 import React from 'react';
-import MainNavbar from '../../components/admin/Navigation/MainNavbar'
+import MainNavbar from '../../components/admin/Menu'
 import Sidebar from '../../components/admin/Navigation/Sidebar'
 import Main from '../../components/admin/Authors'
 

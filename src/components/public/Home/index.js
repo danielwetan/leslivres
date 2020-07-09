@@ -27,7 +27,7 @@ const Home = () => {
       </div>
       <div className="col-12 text-right mt-3">
       <Link to="/book">
-        <button className="btn btn-outline-dark">
+        <button className="btn btn-blue">
           View more
         </button>
       </Link>

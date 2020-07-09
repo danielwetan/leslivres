@@ -26,10 +26,10 @@ const DeleteAuthor = props => {
       <Modal isOpen={deleteModal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Delete Book</ModalHeader>
         <ModalBody>
-          Are you sure to delete this? = {props.id}
+          Are you sure to delete this?
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={deleteAuthor}>Delete</Button>
+          <Button color="primary" className="btn-blue" onClick={deleteAuthor}>Delete</Button>
           <Button color="secondary" onClick={toggle}>Cancel</Button>
         </ModalFooter>
       </Modal>

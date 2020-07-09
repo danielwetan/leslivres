@@ -3,6 +3,9 @@ import Book from './Book';
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
+import { Input } from 'reactstrap';
+
+
 const MainContent = () => {
   const location = useLocation()
   let params = new URLSearchParams(location.search)
@@ -28,12 +31,12 @@ const MainContent = () => {
         genre: genre
       }
     })
-    .then((res) => {
-      setBook(res.data.body)
-    })
-    .catch((err) => {
-      console.log(err.response);
-    })
+      .then((res) => {
+        setBook(res.data.body)
+      })
+      .catch((err) => {
+        console.log(err.response);
+      })
   }
   useEffect(() => {
     setGenre(genreParams)
@@ -64,34 +67,40 @@ const MainContent = () => {
   //   setInput('')
   // }
 
-    return(
-      <>
-        <div className="row">
-          <div className="content-title col-6 mt-2">
-            <h5 class="card-title">Book Lists</h5>
-          </div>
-          <div className="col-6 text-right">
-            <div className="dropdown">
-              <button className="btn dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  return (
+    <>
+
+
+      <div className="row mt-3 ">
+        <div className="content-title col-md-2 mt-2">
+          <h5 class="card-title">Book List</h5>
+        </div>
+        <div className="col-md-10">
+          {/* <div className="dropdown">
+            <button className="btn dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Genre
               </button>
-                <div className="dropdown-menu " aria-labelledby="#dropdownMenuButton">
-                  <Link to="/book?genre=biography" className="dropdown-item">Biography</Link>
-                  <Link to="/book?genre=classic" className="dropdown-item">Classic (Link)</Link>
-                  <a href="/book?genre=classic" className="dropdown-item">Classic (ahref)</a>
-                  <Link to="/book?genre=history" className="dropdown-item">History</Link>
-                </div>
+            <div className="dropdown-menu " aria-labelledby="#dropdownMenuButton">
+              <Link to="/book?genre=biography" className="dropdown-item">Biography</Link>
+              <Link to="/book?genre=classic" className="dropdown-item">Classic</Link>
+              <Link to="/book?genre=history" className="dropdown-item">History</Link>
             </div>
-          </div>
+          </div> */}
+        <form>
+          <Input type="text" name="search" placeholder="What are you looking for?" className="search-bar" />
+        </form>
+
         </div>
-        <div className="row">
-          {books.map((book) => {
+      </div>
+
+      <div className="row">
+        {books.map((book) => {
           return <Book key={book.id} id={book.id} title={book.title} author={book.author} img={book.img} />
-          })}
-        </div>
-      </>
-    )
-  }
+        })}
+      </div>
+    </>
+  )
+}
 
 
 export default MainContent;

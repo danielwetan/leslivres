@@ -25,7 +25,7 @@ const Register = (props) => {
     }
     console.log(data)
     props.register(data).then(
-      props.history.push("/")
+      props.history.push("/login")
     )
     // axios({
     //   method: 'post',
@@ -71,7 +71,7 @@ const Register = (props) => {
             <label for="password">Password</label>
             <input className="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-blue">Submit</button>
         </form>
       </div>
 
