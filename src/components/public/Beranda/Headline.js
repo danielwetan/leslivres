@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const Headline = () => {
   return(
     <>
+    
           <div className="container">
 
         <div className="row mt-5">

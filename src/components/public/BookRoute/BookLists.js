@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Book from './Book';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 import { Input } from 'reactstrap';
@@ -47,7 +47,7 @@ const MainContent = () => {
 
   useEffect(() => {
     getBooks()
-  }, [search, status, page, genre]) // jika terjadi perubahan pada genre
+  }, [search, status, page, genre]) // jika terjadi perubahan pada search, status, page, genre
 
   // equivalent to componentDidMount, fires once when component mounts
   // useEffect(() => {

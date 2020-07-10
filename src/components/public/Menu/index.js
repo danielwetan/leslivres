@@ -30,7 +30,7 @@ const Menu = props => {
       <Navbar color="light" light className="bg-white" expand="md" >
         <NavbarBrand href="/" className="nav-brand-text">
           {/* <img src={Logo} width="160" height="40" alt="" className="logo"></img> */}
-          <span className="brand-a">Le</span><span className="brand-b">Livre</span>
+          <span className="brand-a">Les</span><span className="brand-b">Livres</span>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
