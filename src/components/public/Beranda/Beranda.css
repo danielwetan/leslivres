@@ -1,0 +1,40 @@
+.main-section {
+  background-color: #e0dede;
+}
+
+.main-section-heading {
+  font-family: 'Montserrat Bold';
+  font-size: 55px;
+  line-height: 70px;
+}
+
+.main-section-text {
+  font-family: 'Quicksand';
+  font-size: 20px;
+}
+
+.main-section-btn {
+  background-color: #004380;
+  color: white;
+  font-size: 15px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+.main-section-btn:hover {
+  background-color: #004380;
+  color: lightgray;
+}
+
+.btn-blue {
+  background-color: #004380;
+  color: white;
+  font-size: 15px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+.btn-blue:hover {
+  background-color: #004380;
+  color: lightgray;
+}

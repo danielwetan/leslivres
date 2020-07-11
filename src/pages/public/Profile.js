@@ -1,6 +1,5 @@
 import React from 'react';
-import MainNavbar from '../../components/public/Navigation/MainNavbar'
-import Sidebar from '../../components/public/Navigation/Sidebar'
+import MainNavbar from '../../components/public/Menu'
 import Footer from '../../components/public/Footer'
 import Main from '../../components/public/Profile';
 
@@ -12,12 +11,11 @@ class Profile extends React.Component {
       <MainNavbar />
         <div className="container">
           <div className="row">
-            <Sidebar />
-            <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4 bg-white">
+            <main role="main" className="col-md-12 ml-sm-auto bg-white">
               <Main />
             </main>
-          </div>
         <Footer />
+          </div>
         </div>
       </div> 
       </>

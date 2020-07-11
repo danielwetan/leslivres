@@ -1,0 +1,40 @@
+.detail-book-title {
+  font-family: 'Montserrat Bold';
+  font-size: 20px;
+}
+
+.content-title {
+  font-family: 'Roboto 500';
+}
+
+.book-edit {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #004380;
+}
+
+.book-status {
+  font-size: 20px;
+}
+
+.modal-icon {
+  font-size: 100px;
+}
+
+.book-edit {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #004380;
+}
+
+.book-status {
+font-size: 20px;
+}
+
+.modal-icon {
+font-size: 100px;
+}

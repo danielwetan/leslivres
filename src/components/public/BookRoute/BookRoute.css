@@ -1,0 +1,47 @@
+.book-author {
+  font-family: 'Montserrat';
+  font-size: 10px;
+  color: #373D3F;
+}
+
+.pagination-text {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #004380;
+}
+
+.book-home {
+  padding: 0 !important;
+}
+
+.book-title {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 11px;
+  margin-top: -15px;
+  color: #373D3F;
+  text-decoration: none;
+}
+
+.book-title:hover {
+  color: gray;
+}
+
+.book-display-link:hover {
+  text-decoration: none;
+}
+
+
+.book-link {
+  color: #373D3F;
+}
+
+.book-link a {
+  text-decoration: none;
+}
+
+.img-border{
+  border-radius: 3%;
+}

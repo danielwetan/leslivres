@@ -17,7 +17,7 @@ import {
   Button
 } from 'reactstrap';
 
-import Logo from '../../../images/logo/logo.png'
+// import Logo from '../../../images/logo/logo.png'
 
 
 const Menu = props => {

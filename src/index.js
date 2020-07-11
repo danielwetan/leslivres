@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/App.css';
+import './App.css';
 
 import {Provider} from 'react-redux';
 import store from './redux/store';

@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import backgroundImg from '../../../images/background/svg/speech-to-text.svg';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
-
 import {connect} from 'react-redux';
 import { login } from '../../../redux/actions/auth';
+
+import './Login.css';
 
 const Login = props => {
   const [username, setUsername] = useState('');

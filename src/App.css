@@ -1,0 +1,192 @@
+/* PUBLIC CSS */
+
+@font-face {
+	font-family: 'Roboto 500';
+	src: url(../src/assets/fonts/roboto.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url(../src/assets/fonts/quicksand.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url(../src/assets/fonts/montserrat.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Montserrat Bold';
+	src: url(../src/assets/fonts/montserrat-bold.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url(../src/assets/fonts/rubik.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Crimson Text';
+	src: url(../src/assets/fonts/crimson-text.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Vollkorn';
+	src: url(../src/assets/fonts/vollkorn.woff2) format('woff2');
+}
+
+
+body {
+  font-family: 'Quicksand';
+  font-size: 15px;
+  color: #373D3F;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+}
+
+/* .sidenav {
+  height: 100%;
+  top: 0;
+} */
+
+/* .sidebar-title {
+  font-family: 'Montserrat Bold';
+  font-weight: 600;
+  font-size: 13px;
+  color: #373D3F !important;
+}
+
+.sidebar-body {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #373D3F;
+}
+
+.sidebar-body a {
+  color: gray;
+} */
+
+/* .sidebar-link a {
+  text-decoration: none;
+}
+
+.sidebar-link a:hover {
+  color: #373D3F;
+} */
+
+/* Profile Menu */
+/* .profile-rounded {
+  background-color: white;
+  color: gray;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 50%;
+  padding-top: 4px;
+}
+
+.profile-rounded {
+  color: gray
+}
+
+.profile-rounded:hover {
+  color: lightgray
+} */
+
+/*
+.profile-img {
+  border-radius: 50%;
+  background-color: none;
+  display: inline-block;
+}
+
+.profile-img:hover {
+ border-radius: 50%;
+ width: 45px;
+ height: 45px;
+} */
+
+/* .profile-img-container {
+  position: relative;
+  width: 40px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.profile-img-container:hover .profile-img {
+  opacity: 0.7;
+}
+
+.profile-dropdown-bg {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.profile-dropdown-bg:hover {
+  background-color: white;
+
+}
+
+.profile-dropdown-bg:active {
+  border-color: red;
+}
+
+.search-bar {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 13px;
+} */
+
+
+/* .logo {
+  margin-left: 20px;
+}
+
+.nav-icon {
+  background-color: white;
+  color: gray;
+}
+
+.nav-icon:hover {
+  color: #373D3F;
+}
+
+.nav-icon-border {
+  width: 35px;
+  height: 35px;
+} */
+
+
+/* .profile-rounded {
+  background-color: white;
+  color: gray;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 50%;
+  padding-top: 4px;
+}
+
+.profile-rounded {
+  color: gray
+}
+
+.profile-rounded:hover {
+  color: #373D3F
+} */

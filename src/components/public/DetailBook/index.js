@@ -14,6 +14,8 @@ import {
   Input
 } from 'reactstrap';
 
+import './DetailBook.css';
+
 const DetailBook = props => {
   const [deleteModal, setDeleteModal] = useState(false);
   const toggleDeleteModal = () => setDeleteModal(!deleteModal);

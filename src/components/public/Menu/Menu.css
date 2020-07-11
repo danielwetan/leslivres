@@ -1,0 +1,27 @@
+.nav-text {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-brand-text {
+  font-family: 'Montserrat Bold';
+  font-size: 28px;
+  font-weight: 600;
+  text-decoration: none;
+  color: gray;
+}
+
+.brand-a {
+  color: #295b97;
+}
+
+.brand-b {
+  color: #373D3F;
+}
+
+.navbar-bg {
+  background-color: white;
+  box-shadow: 0px 1px 5px 0px #888;
+}

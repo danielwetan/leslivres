@@ -2,6 +2,7 @@ import React from 'react'
 import Form from './Form'
 import Social from './Social'
 import About from './About'
+import './Footer.css';
 
 const Footer = () => {
     return(

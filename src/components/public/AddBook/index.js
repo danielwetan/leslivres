@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import Img from '../../../images/background/svg/reading-time.svg'
 import axios from 'axios';
+import './AddBook.css';
+
 
 class AddBook extends Component {
   constructor() {

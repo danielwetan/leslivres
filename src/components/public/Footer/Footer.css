@@ -1,0 +1,35 @@
+/* Footer */
+.social-rounded {
+  background-color: #004380;
+  color: white;
+  width: 50px;
+  height: 50px;
+  padding-top: 7px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 50%;
+}
+
+.social-rounded a {
+  color: white
+}
+
+.social-rounded a:hover {
+  color: lightgray
+}
+
+.btn-footer {
+  background-color: #004380;
+  color: white
+}
+
+.btn-footer:hover {
+  background-color: #004380;
+  color: lightgray
+}
+
+
+.footer-title {
+  font-family: 'Montserrat';
+  font-weight: 600;
+}

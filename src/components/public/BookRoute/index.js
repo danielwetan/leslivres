@@ -1,8 +1,8 @@
 import React from 'react';
 import BookLists from '../BookRoute/BookLists'
 import Pagination from './Pagination';
-
 import { Input } from 'reactstrap';
+import './BookRoute.css';
 
 const Home = () => {
   return(

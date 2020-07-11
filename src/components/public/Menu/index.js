@@ -21,6 +21,8 @@ import Logo from '../../../images/logo/logo.png'
 
 import { Link } from 'react-router-dom';
 
+import './Menu.css';
+
 const Menu = props => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);

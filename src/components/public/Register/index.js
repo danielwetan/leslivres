@@ -4,7 +4,7 @@ import backgroundImg from '../../../images/background/svg/folder.svg';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {register} from '../../../redux/actions/auth'
-
+import './Register.css';
 
 const Register = (props) => {
   const [username, setUsername] = useState('');

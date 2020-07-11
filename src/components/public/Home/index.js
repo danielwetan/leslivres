@@ -6,6 +6,7 @@ import Featured from '../Home/Featured'
 import backgroundImg from '../../../images/background/svg/book-lover.svg'
 
 import { Link } from 'react-router-dom';
+import './Home.css'
 
 const Home = () => {
   return(
