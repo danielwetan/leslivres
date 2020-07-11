@@ -1,0 +1,26 @@
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-family: 'Montserrat Bold';
+  font-size: 20px;
+}
+
+.profile-username {
+  font-size: 14px;
+}
+
+.profile-city {
+  font-size: 12px;
+  color: gray;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+

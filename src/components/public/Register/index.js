@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import backgroundImg from '../../../images/background/svg/folder.svg';
+import backgroundImg from '../../../../src/assets/images/background/svg/book-lover.svg';
 // import axios from 'axios';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';

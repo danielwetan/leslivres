@@ -11,8 +11,8 @@ import {
 
 import { Link } from 'react-router-dom'
 
-import Logo from '../../../../images/logo/logo.png'
-import ProfileImg from '../../../../assets/images/profile.jpg'
+// import Logo from '../../../../images/logo/logo.png'
+// import ProfileImg from '../../../../assets/images/profile.jpg'
 
 const NavbarMain = props => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -25,9 +25,9 @@ const NavbarMain = props => {
           <i class="fas fa-ellipsis-v nav-icon"></i>
         </span>
         <div className="text-center">
-          <NavbarBrand>
+          {/* <NavbarBrand>
             <img src={Logo} width="180" height="50" alt="" className="logo"></img>
-          </NavbarBrand>
+          </NavbarBrand> */}
         </div>
 
         <div class="d-sm-block d-md-none">
@@ -116,9 +116,9 @@ const NavbarMain = props => {
                 {/* Logged User */}
                 <Dropdown direction="left" isOpen={dropdownOpen} toggle={dropdownToggle} className="profile-dropdown-bg">
                   <DropdownToggle className="profile-dropdown-bg border-0 px-0 py-0">
-                    <div class="profile-img-container">
+                    {/* <div class="profile-img-container">
                       <img src={ProfileImg} alt="Avatar" className="profile-img"></img>
-                    </div>
+                    </div> */}
                   </DropdownToggle>
                   <DropdownMenu className="mt-4">
                     <Link to="/detail"><DropdownItem>Profile</DropdownItem></Link>

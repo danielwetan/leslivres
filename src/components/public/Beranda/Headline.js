@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImg from '../../../images/background/svg/reading-time.svg'
+import backgroundImg from '../../../assets/images/background/svg/reading-time.svg'
 
 import { Link } from 'react-router-dom';
 
