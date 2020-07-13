@@ -12,10 +12,11 @@ const Register = props => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState(2);
+  const [role, setRole] = useState('');
 
   const userRegistration = e => {
     e.preventDefault();
+    setRole(2)
     const data = {
       username: username,
       full_name: fullName,

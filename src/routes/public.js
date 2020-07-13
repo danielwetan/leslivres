@@ -1,4 +1,4 @@
-import {Home, BookRoute, DetailBook, Login, Register, Profile, PageNotFound} from '../pages/public';
+import {Home, BookRoute, DetailBook, Login, Register, Profile} from '../pages/public';
 
 const PublicRoutes = [
   {

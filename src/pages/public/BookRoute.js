@@ -1,5 +1,4 @@
 import React from 'react';
-import MainNavbar from '../../components/public/Navigation/MainNavbar'
 import Sidebar from '../../components/public/Navigation/Sidebar'
 import Footer from '../../components/public/Footer'
 import Main from '../../components/public/BookRoute';

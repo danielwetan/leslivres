@@ -1,28 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
-  Input,
-  Button
+  NavbarBrand
 } from 'reactstrap';
 
 // import Logo from '../../../images/logo/logo.png'
 
 
 const Menu = props => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
 
   return (
     <>

@@ -1,20 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input} from 'reactstrap';
+import React, { useState } from 'react';
+import { Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input} from 'reactstrap';
 import axios from 'axios';
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('1');
-  const [genre, setGenre] = useState('1');
+  const [author, setAuthor] = useState('');
+  const [genre, setGenre] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState([]);
-  const [status, setStatus] = useState('Available')
+  const [status, setStatus] = useState('')
 
   const [addBookModal, setAddBookModal] = useState(false);
   const toggleAddBookModal = () => setAddBookModal(!addBookModal)
 
   const AddNewBook = event => {
     event.preventDefault();
+    setAuthor(1)
+    setGenre(1)
+    setStatus("Available")
     const formData = new FormData();
     formData.append('title', title);
     formData.append('author', author);

@@ -1,6 +1,5 @@
 import React from 'react';
 import MainNavbar from '../../components/public/Menu'
-import Sidebar from '../../components/public/Navigation/Sidebar'
 import Footer from '../../components/public/Footer'
 import Main from '../../components/public/Register';
 

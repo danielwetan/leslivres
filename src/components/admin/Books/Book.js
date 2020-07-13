@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import EditBook from './Modals/EditBook';
 import DeleteBook from './Modals/DeleteBook';
 

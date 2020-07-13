@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input} from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input} from 'reactstrap';
 import axios from 'axios';
 
 const EditBookModal = props => {
@@ -7,14 +7,17 @@ const EditBookModal = props => {
   const toggle = () => setEditBookModal(!editBookModal);
 
   const [title, setTitle] = useState(`${props.title}`)
-  const [author, setAuthor] = useState('1')
-  const [genre, setGenre] = useState('1')
+  const [author, setAuthor] = useState('')
+  const [genre, setGenre] = useState('')
   const [description, setDescription] = useState('')
   const [img, setImg] = useState([])
-  const [status, setStatus] = useState('Available')
+  const [status, setStatus] = useState('')
 
   const EditBook = event => {
     event.preventDefault();
+    setAuthor(1)
+    setGenre(1)
+    setStatus("Available")
     const formData = new FormData();
     formData.append('title', title);
     formData.append('author', author);

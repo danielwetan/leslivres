@@ -10,7 +10,7 @@ const History = props => {
     } else {
       setStatus('Returned');
     }
-  }, [])
+  }, [props])
 
   return (
     <>

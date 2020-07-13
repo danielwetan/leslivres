@@ -8,13 +8,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
-  Input,
-  Button
+  NavbarText
 } from 'reactstrap';
 
 // import Logo from '../../../images/logo/logo.png'
