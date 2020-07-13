@@ -14,32 +14,16 @@ const Register = props => {
   const [password, setPassword] = useState('');
   const [role, setRole] = useState(2);
 
-  // Post new user to db
-  // const handleRegister = event => {
-  //   event.preventDefault()
-  //   const data = {
-  //     username: username,
-  //     full_name: fullName,
-  //     email: email,
-  //     password: password,
-  //     role: role
-  //   }
-  //   console.log(data)
-  //   props.register(data).then(
-  //     props.history.push("/login")
-  //   )
-  // }
-
-    const userRegistration = e => {
-      e.preventDefault();
-      const data = {
-        username: username,
-        full_name: fullName,
-        email: email,
-        password: password,
-        role: role
-      }
-      props.register(data)
+  const userRegistration = e => {
+    e.preventDefault();
+    const data = {
+      username: username,
+      full_name: fullName,
+      email: email,
+      password: password,
+      role: role
+    }
+    props.dispatch(register(data))
       .then(() => {
         Swal.fire(
           'Register Success!',
@@ -55,7 +39,7 @@ const Register = props => {
           text: err
         })
       })
-    }
+  }
 
 
   return (
@@ -107,11 +91,6 @@ const mapStateToProps = state => ({
   auth: state.auth
 })
 
-const mapDispatchToProps = { register };
-
 const routePush = withRouter(Register);
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(routePush)
+export default connect(mapStateToProps)(routePush)

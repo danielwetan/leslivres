@@ -19,7 +19,7 @@ const Login = props => {
       username: username,
       password: password
     }
-    props.login(data)
+    props.dispatch(login(data))
     .then(() => {
       const Toast = Swal.mixin({
         toast: true,
@@ -36,6 +36,7 @@ const Login = props => {
         icon: 'success',
         title: 'Sign in success!'
       })
+      props.history.push('/')
     })
     .catch((err) => {
       console.log(err)
@@ -88,12 +89,7 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-const mapDispatchToProps = { login };
-
 const routePush = withRouter(Login);
 
 // Hight order component
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(routePush);
+export default connect(mapStateToProps)(routePush);

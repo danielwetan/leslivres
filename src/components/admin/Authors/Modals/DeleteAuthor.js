@@ -1,41 +1,57 @@
-import React, {useState} from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input} from 'reactstrap';
-import axios from 'axios';
+import React from 'react';
+import { deleteAuthor } from '../../../../redux/actions/author';
+import { connect } from 'react-redux';
+import Swal from 'sweetalert2';
 
 const DeleteAuthor = props => {
-  const [deleteModal, setDeleteModal] = useState(false);
-  const toggle = () => setDeleteModal(!deleteModal);
-
-  const deleteAuthor = () => {
-    axios({
-      method: 'DELETE',
-      url: `http://localhost:3000/author/${props.id}`
+  /// DELETE STILL ERROR !
+  const submitDelete = id => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'Data will be deleted!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButonColor: '#3085d6',
+      cancelButtonColor: '#dd',
+      confirmButtonText: 'Yes'
     })
-    .then(() => {
-      window.location.replace('http://localhost:5000/admin')
-    })
-    .catch((err) => {
-      console.log(err.response);
+    .then((result) => {
+      if(result.value) {
+        const token = props.auth.data.mainToken
+        props.dispatch(deleteAuthor(id, token))
+        .then(() => {
+          Swal.fire(
+            'Deleted!',
+            'The Author successfully deleted!.',
+            'success'
+          )
+          // CHANGE THIS LINE!!!
+          setInterval(() => {
+            window.location.replace("http://localhost:5000/admin/authors")
+          }, 2000)
+        })
+        .catch((err) => {
+          console.log(err)
+          Swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            text: 'Something error!'
+          })
+        })
+      }
     })
   }
 
-  return(
+  return (
     <>
-      <span onClick={toggle} className="book-edit btn bg-white"><i class="fas fa-trash"></i></span>
-
-      <Modal isOpen={deleteModal} toggle={toggle}>
-        <ModalHeader toggle={toggle}>Delete Book</ModalHeader>
-        <ModalBody>
-          Are you sure to delete this?
-        </ModalBody>
-        <ModalFooter>
-          <Button color="primary" className="btn-blue" onClick={deleteAuthor}>Delete</Button>
-          <Button color="secondary" onClick={toggle}>Cancel</Button>
-        </ModalFooter>
-      </Modal>
-
+      <span onClick={(() => submitDelete(props.id))} className="book-edit btn bg-white"><i class="fas fa-trash"></i></span>
     </>
   )
 }
 
-export default DeleteAuthor;
+const mapStateToProps = state => ({
+  auth: state.auth,
+  author: state.author,
+})
+
+export default connect(mapStateToProps)(DeleteAuthor)

@@ -1,33 +1,54 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'; 
-import Author from './Author';
+// import Author from './Author';
 
-const AuthorList = () => {
+import { getAuthor } from '../../../redux/actions/author';
+import { connect } from 'react-redux';
 
-  const [author, setAuthor] = useState([]);
-  
-  const getAuthor = () => {
+import axios from 'axios';
+
+const AuthorList = props => {
+
+  //// GET DATA WITH REDUX STILL ERROR !!!!
+
+  const [authorState, setAuthorState] = useState([]);
+
+  // console.log("????")
+  // console.log(props.author)
+
+  const getAuthorData = () => {
+    const token = props.auth.data.mainToken
+    props.dispatch(getAuthor(token))
+    .then(() => {
+      setAuthorState(props.author.data)
+    })
+    .catch(err => {
+      console.log(err)
+    })
     axios({
       method: 'GET',
       url: 'http://localhost:3000/author'
     })
-    .then((res) => {
-      setAuthor(res.data.body)
-    })
-    .catch((err) => {
-      console.log(err.response);
-    })
+      .then((res) => {
+        setAuthorState(res.data.body)
+        // console.log("????")
+        // console.log(res.data.body)      
+      })
+      .catch((err) => {
+        console.log(err.response);
+      })
   }
 
   useEffect(() => {
-    getAuthor()
+    getAuthorData()
   }, [])
 
-  console.log(author);
+console.log("????")
+console.log(authorState)
+console.log("????")
 
-  return(
+  return (
     <>
-        <table className="table table-responsive">
+      <table className="table table-responsive">
         <thead>
           <tr>
             <th scope="col">Id</th>
@@ -36,13 +57,20 @@ const AuthorList = () => {
             <th scope="col">Delete</th>
           </tr>
         </thead>
-      {author.map((author) => {
-        return <Author key={author.id} id={author.id} name={author.name} />
-      })}
+        {/* {authorState.map((author) => {
+          return <Author key={author.id} id={author.id} name={author.name} />
+        })} */}
       </table>
 
     </>
   )
 }
 
-export default AuthorList;
+
+
+const mapStateToProps = state => ({
+  auth: state.auth,
+  author: state.author
+})
+
+export default connect(mapStateToProps)(AuthorList)

@@ -1,37 +1,46 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input} from 'reactstrap';
-import axios from 'axios';
+import React, { useState } from 'react';
+import { Button, Modal, ModalHeader, ModalBody , Form, FormGroup, Label, Input} from 'reactstrap';
 
-const AddAuthor = () => {
+import {createAuthor } from '../../../../redux/actions/author'
+import {connect} from 'react-redux';
+import Swal from 'sweetalert2';
+
+const AddAuthor = props => {
   const [addModal, setAddModal] = useState(false);
   const toggle = () => setAddModal(!addModal);
 
   const [authorName, setAuthorName] = useState([]);
 
-  const AddNewAuthor = event => {
-    event.preventDefault();
-    const formData = new FormData();
-    formData.append('name', authorName);
-    axios({
-      method: 'POST',
-      url: 'http://localhost:3000/author',
-      data: formData,
-      header: {
-        'Content-Type': 'multipart/form-data'
-      } 
-    })
+  const AddNewAuthor = e => {
+    e.preventDefault();
+    const data = {
+      name: authorName
+    }
+    const token = props.auth.data.mainToken
+    props.dispatch(createAuthor(data, token))
     .then(() => {
-      window.location.replace('http://localhost:5000/admin');
-    })
-    .catch((err) => {
-      console.log(err.response);
+      Swal.fire(
+        'New author created!',
+        'Success!',
+        'success'
+      )
+      .then(() => {
+        window.location.replace('http://localhost:5000/admin/authors')
+      })
+      .catch((err) => {
+        console.log(err)
+        Swal.fire({
+          icon: 'error',
+          title: 'Something error!',
+          text: err
+        })
+      })
     })
   }
 
   return(
     <>
       <span onClick={toggle} className="book-edit btn bg-white"><i class="fas fa-plus-circle"></i> Add Author</span>
-
 
       <Modal isOpen={addModal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Edit Book</ModalHeader>
@@ -50,4 +59,8 @@ const AddAuthor = () => {
   )
 }
 
-export default AddAuthor;
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+export default connect(mapStateToProps)(AddAuthor)

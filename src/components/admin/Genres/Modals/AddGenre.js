@@ -1,30 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input} from 'reactstrap';
-import axios from 'axios';
+import React, { useState } from 'react';
+import { Button, Modal, ModalHeader, ModalBody , Form, FormGroup, Label, Input} from 'reactstrap';
 
-const AddGenre = () => {
+import {createGenre } from '../../../../redux/actions/genre'
+import {connect} from 'react-redux';
+import Swal from 'sweetalert2';
+
+const AddGenre = props => {
   const [addModal, setAddModal] = useState(false);
   const toggle = () => setAddModal(!addModal);
 
   const [genreName, setGenreName] = useState([]);
 
-  const AddNewGenre = event => {
-    event.preventDefault();
-    const formData = new FormData();
-    formData.append('name', genreName);
-    axios({
-      method: 'POST',
-      url: 'http://localhost:3000/genre',
-      data: formData,
-      header: {
-        'Content-Type': 'multipart/form-data'
-      } 
-    })
+  const AddNewGenre = e => {
+    e.preventDefault();
+    const data = {
+      name: genreName
+    }
+    const token = props.auth.data.mainToken
+    props.dispatch(createGenre(data, token))
     .then(() => {
-      window.location.replace('http://localhost:5000/admin/genres');
-    })
-    .catch((err) => {
-      console.log(err.response);
+      Swal.fire(
+        'New genre created!',
+        'Success!',
+        'success'
+      )
+      .then(() => {
+        window.location.replace('http://localhost:5000/admin/genres')
+      })
+      .catch((err) => {
+        console.log(err)
+        Swal.fire({
+          icon: 'error',
+          title: 'Something error!',
+          text: err
+        })
+      })
     })
   }
 
@@ -33,7 +43,7 @@ const AddGenre = () => {
       <span onClick={toggle} className="book-edit btn bg-white"><i class="fas fa-plus-circle"></i> Add Genre</span>
 
       <Modal isOpen={addModal} toggle={toggle}>
-        <ModalHeader toggle={toggle}>Add Genre</ModalHeader>
+        <ModalHeader toggle={toggle}>Edit Book</ModalHeader>
         <ModalBody>
             <Form onSubmit={AddNewGenre}>
             <FormGroup>
@@ -49,4 +59,8 @@ const AddGenre = () => {
   )
 }
 
-export default AddGenre;
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+export default connect(mapStateToProps)(AddGenre)
