@@ -1,111 +1,85 @@
 import React, { useState } from 'react';
 import backgroundImg from '../../../../src/assets/images/background/svg/book-lover.svg';
-import axios from 'axios';
+
 import { withRouter } from 'react-router-dom';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { login } from '../../../redux/actions/auth';
+
+import Swal from 'sweetalert2';
 
 import './Login.css';
 
 const Login = props => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  
-  const handleLogin = event => {
-    event.preventDefault()
 
-    // LOGIN USING REDUX
-    // const data = {
-    //   username: username,
-    //   password: password
-    // }
-    // console.log(data);
-    // props.login(data).then(() => {
-    //   props.history.push("/")
-    // })
-
-    axios({
-      method: 'POST',
-      url: 'http://localhost:3000/auth/login',
-      data: {
-        username: username,
-        password: password
-      }
-    })
-    .then((res) => {
-      localStorage.setItem('mainToken', res.data.body[0].mainToken)
-      localStorage.setItem('refreshToken', res.data.body[0].refreshToken)
-      console.log(res)
-      goToHome()
-      // this.goToHome()
+  const userLogin = e => {
+    e.preventDefault()
+    const data = {
+      username: username,
+      password: password
+    }
+    props.login(data)
+    .then(() => {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        onOpen: toast => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      Toast.fire({
+        icon: 'success',
+        title: 'Sign in success!'
+      })
     })
     .catch((err) => {
       console.log(err)
+      Swal.fire({
+        icon: 'error',
+        title: 'Something error',
+        text: 'Username or password is invalid!'
+      })
     })
   }
 
-  const goToHome = () => {
-    props.history.push('/')
-  }
-
-  // image upload
-  // handlePostDefault = (event) => {
-  //   event.preventDefault();
-  //   const formData = new FormData();
-  //   formData.append('name', this.state.name)
-  //   formData.append('image', this.state.image[0])
-  //   formData.append('price', this.state.price)
-  //   formData.append('qty', this.state.qty)
-  //   axios({
-  //     method: 'POST',
-  //     url: 'http://localhost:3000/book',
-  //     data: formData,
-  //     headers: {
-  //       'Content-Type': 'multipart/form-data',
-  //     }
-  //   })
-  //   .then((res) => {
-  //     console.log(res)
-  //   })
-  //   .catch((err) => {
-  //     console.log(err)
-  //   })
-  // }
-
-    // console.log(this.props.auth)
-    return(
+  return (
     <>
 
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
         <div className="content-title">
-        <h1 class="h1">Login</h1>
+          <h1 class="h1">Login</h1>
         </div>
       </div>
 
-    {/* Main Section*/}
-    <div className="row justify-content-center align-items-center">
-    <div className="col-md-4 col-sm-12">
-        <form onSubmit={handleLogin}>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input class="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)}></input>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
-          </div>
-          <button type="submit" class="btn btn-blue">Login</button>
-        </form>
-      </div>
+      {/* Main Section*/}
+      <div className="row justify-content-center align-items-center">
+        <div className="col-md-4 col-sm-12">
+          <form onSubmit={userLogin}>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input class="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)}></input>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input class="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+            </div>
+            <button type="submit" class="btn btn-blue">Login</button>
+          </form>
+        </div>
 
-      <div className="col-md-8 col-sm-12">
-      <img src={backgroundImg}
-           className="login-img"
-           alt="Book"
-           width="100%"
-           height="100%"></img>
+        <div className="col-md-8 col-sm-12">
+          <img src={backgroundImg}
+            className="login-img"
+            alt="Book"
+            width="100%"
+            height="100%"></img>
+        </div>
       </div>
-    </div>
     </>
   );
 }

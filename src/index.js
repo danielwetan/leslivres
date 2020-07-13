@@ -7,12 +7,16 @@ import '@fortawesome/fontawesome-free/js/all.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-import {Provider} from 'react-redux';
-import store from './redux/store';
+import { Provider } from 'react-redux';
+import storage from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
+const { store, persistor } = storage
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <PersistGate persistor={persistor}>
+      <App />
+    </PersistGate>
   </Provider>,
   document.getElementById('root')
 );
