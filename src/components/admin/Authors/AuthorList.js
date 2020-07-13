@@ -15,6 +15,7 @@ const AuthorList = props => {
   // console.log("????")
   // console.log(props.author)
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getAuthorData = () => {
     const token = props.auth.data.mainToken
     props.dispatch(getAuthor(token))
@@ -40,7 +41,7 @@ const AuthorList = props => {
 
   useEffect(() => {
     getAuthorData()
-  }, [])
+  }, [getAuthorData])
 
 console.log("????")
 console.log(authorState)

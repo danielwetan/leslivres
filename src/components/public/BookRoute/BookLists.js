@@ -20,6 +20,7 @@ const MainContent = () => {
   const [page, setPage] = useState('');
   const [genre, setGenre] = useState('');
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getBooks = () => {
     axios({
       metod: 'GET',
@@ -47,7 +48,7 @@ const MainContent = () => {
 
   useEffect(() => {
     getBooks()
-  }, [search, status, page, genre]) // jika terjadi perubahan pada search, status, page, genre
+  }, [search, status, page, genre, getBooks]) // jika terjadi perubahan pada search, status, page, genre
 
   // equivalent to componentDidMount, fires once when component mounts
   // useEffect(() => {
