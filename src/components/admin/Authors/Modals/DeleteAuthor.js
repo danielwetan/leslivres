@@ -27,7 +27,7 @@ const DeleteAuthor = props => {
           )
           // CHANGE THIS LINE!!!
           setInterval(() => {
-            window.location.replace("http://localhost:5000/admin/authors")
+            window.location.replace(process.env.REACT_APP_PUBLIC_URL + "admin/authors")
           }, 2000)
         })
         .catch((err) => {

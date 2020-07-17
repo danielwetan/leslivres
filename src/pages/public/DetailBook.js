@@ -22,7 +22,7 @@ class DetailBook extends React.Component {
   getDetailBook = () => {
     axios({
       method: "GET",
-      url: `http://localhost:3000/book/${this.state.id}`,
+      url: process.env.REACT_APP_API_URL + `book/${this.state.id}`,
     })
     .then((res) => {
       this.setState({

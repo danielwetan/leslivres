@@ -27,14 +27,14 @@ const EditBookModal = props => {
     formData.append('status', status);
     axios({
       method: 'PUT',
-      url: `http://localhost:3000/book/${props.id}`,
+      url: process.env.REACT_APP_API_URL + `book/${props.id}`,
       data: formData,
       header: {
         'Content-Type': 'multipart/form-data'
       }
     })
     .then(() => {
-      window.location.replace('http://localhost:5000/admin');
+      window.location.replace(process.env.REACT_APP_PUBLIC_URL + 'admin');
     })
     .catch((err) => {
       console.log(err.response)

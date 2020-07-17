@@ -8,7 +8,7 @@ const Book = (props) => {
     <>
       <div className="col-md-2 col-6 mt-3">
         <div class="card border-0">
-          <img src={`http://localhost:3000/img/${props.img}`} class="card-img-top" alt="..."></img>
+          <img src={process.env.REACT_APP_API_URL + `img/${props.img}`} class="card-img-top" alt="..."></img>
           <div class="card-body book-home mt-4">
             <Link to={`/book/${props.id}`} className="book-display-link">
             <div class="book-title home-book">

@@ -9,10 +9,10 @@ const DeleteBookModal = props => {
   const deleteBook = () => {
     axios({
       method: 'DELETE',
-      url: `http://localhost:3000/book/${props.id}`
+      url: process.env.REACT_APP_API_URL + `book/${props.id}`
     })
     .then(() => {
-      window.location.replace('http://localhost:5000/admin');
+      window.location.replace(process.env.REACT_APP_PUBLIC_URL + 'admin');
     })
     .catch((err) => {
       console.log(err.response);

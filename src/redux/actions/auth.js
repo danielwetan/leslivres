@@ -5,7 +5,7 @@ const login = data => {
     type: 'LOGIN',
     payload: axios({
       method: 'POST',
-      url: 'http://localhost:3000/auth/login',
+      url: process.env.REACT_APP_API_URL + 'auth/login',
       data: {
         username: data.username,
         password: data.password
@@ -19,7 +19,7 @@ const register = data => {
     type: 'REGISTER',
     payload: axios({
       method: 'post',
-      url: 'http://localhost:3000/auth/register',
+      url: process.env.REACT_APP_API_URL + 'auth/register',
       data: {
         username: data.username,
         full_name: data.full_name,

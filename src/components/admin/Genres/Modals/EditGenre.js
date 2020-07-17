@@ -25,7 +25,7 @@ const EditGenre = props => {
         'success'
       )
       .then(() => {
-        window.location.replace("http://localhost:5000/admin/genres")
+        window.location.replace(process.env.REACT_APP_PUBLIC_URL + "admin/genres")
       })
       .catch((err) => {
         console.log(err)

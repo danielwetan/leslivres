@@ -32,16 +32,16 @@ const Menu = props => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="nav-text mr-auto" navbar>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">About</NavLink>
+              <NavLink href="http://192.168.43.186:5000">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="http://localhost:5000/book">Collection</NavLink>
+              <NavLink href="http://192.168.43.186:5000/book">Collection</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">Contact</NavLink>
+              <NavLink href="http://192.168.43.186:5000">Contact</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">Faq</NavLink>
+              <NavLink href="http://192.168.43.186:5000">Faq</NavLink>
             </NavItem>
             <NavItem>
             </NavItem>

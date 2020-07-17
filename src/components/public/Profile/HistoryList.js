@@ -8,7 +8,7 @@ const HistoryList = () => {
   const getTransactionData = () => {
     Axios({
       method: 'GET',
-      url: 'http://localhost:3000/transaction/1'
+      url: process.env.REACT_APP_API_URL + 'transaction/1'
     })
       .then((res) => {
         // console.log(res.data.body)

@@ -32,7 +32,7 @@ const DetailBook = props => {
   function deleteBook() {
     Axios({
       method: 'DELETE',
-      url: `http://localhost:3000/book/${props.id}`
+      url: process.env.REACT_APP_API_URL + `book/${props.id}`
     })
     .then((res) => {
       // display modal successfully delete
@@ -65,7 +65,7 @@ const DetailBook = props => {
       <>
         <div class="row mt-4">
           <div class="col-md-3 col-sm-8 mb-3 text-center">
-            <img src={`http://localhost:3000/img/${props.img}`} class="card-img-top" alt="..."></img>
+            <img src={process.env.REACT_APP_API_URL + `img/${props.img}`} class="card-img-top" alt="..."></img>
             <button class="btn btn-blue mt-2 px-5" onClick={statusCheck}><i class="fas fa-truck"></i> Borrow</button>
           </div>
 

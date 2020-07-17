@@ -9,7 +9,7 @@ const GenreList = () => {
   const getGenre = () => {
     axios({
       method: 'GET',
-      url: 'http://localhost:3000/genre'
+      url: process.env.REACT_APP_API_URL + 'genre'
     })
     .then((res) => {
       setGenre(res.data.body)

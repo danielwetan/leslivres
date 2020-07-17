@@ -27,7 +27,7 @@ const AuthorList = props => {
     })
     axios({
       method: 'GET',
-      url: 'http://localhost:3000/author'
+      url: process.env.REACT_APP_API_URL + 'author'
     })
       .then((res) => {
         setAuthorState(res.data.body)

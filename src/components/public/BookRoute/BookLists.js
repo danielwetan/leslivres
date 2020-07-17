@@ -24,7 +24,7 @@ const MainContent = () => {
   const getBooks = () => {
     axios({
       metod: 'GET',
-      url: `http://localhost:3000/book`,
+      url: process.env.REACT_APP_API_URL + 'book',
       params: {
         search: search,
         status: status,

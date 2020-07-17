@@ -25,7 +25,7 @@ const AddAuthor = props => {
         'success'
       )
       .then(() => {
-        window.location.replace('http://localhost:5000/admin/authors')
+        window.location.replace(process.env.REACT_APP_PUBLIC_URL + 'admin/authors')
       })
       .catch((err) => {
         console.log(err)
