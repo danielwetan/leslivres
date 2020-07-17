@@ -1,6 +1,6 @@
 const baseUrl = process.env.REACT_APP_API_URL;
 
-const apiUri = {
+const apiUrl = {
   auth: {
     login: `${baseUrl}/auth/login`,
     register: `${baseUrl}/auth/register`,
@@ -10,4 +10,4 @@ const apiUri = {
   author: `${baseUrl}/author`
 }
 
-export default apiUri;
+export default apiUrl;
