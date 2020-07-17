@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import Book from './Book';
 import { useLocation } from 'react-router-dom';
@@ -48,7 +49,7 @@ const MainContent = () => {
 
   useEffect(() => {
     getBooks()
-  }, [search, status, page, genre, getBooks]) // jika terjadi perubahan pada search, status, page, genre
+  }, [search, status, page, genre]) // jika terjadi perubahan pada search, status, page, genre
 
   // equivalent to componentDidMount, fires once when component mounts
   // useEffect(() => {
