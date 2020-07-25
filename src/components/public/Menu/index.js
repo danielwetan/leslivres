@@ -15,11 +15,21 @@ import {
 
 import { Link } from 'react-router-dom';
 
+
 import './Menu.css';
+
+import {connect} from 'react-redux';
+import {logout} from '../../../redux/actions/auth'
 
 const Menu = props => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+
+  const logout = () => {
+        
+  }
+
+  console.log(props)
 
   return (
     <>
@@ -47,6 +57,10 @@ const Menu = props => {
             </NavItem>
           </Nav>
           <NavbarText>
+              <button className="btn bg-white border-0" onClick={logout}>Logout</button>
+            <Link to="/profile">
+              <button className="btn btn-info btn-blue" >Profile</button>
+            </Link>
             <Link to="/login">
               <button className="btn bg-white border-0">Login</button>
             </Link>
@@ -59,5 +73,10 @@ const Menu = props => {
     </>
   )
 }
+const mapStateToProps = state => ({
+  auth: state.auth,
+});
 
-export default Menu;
+const mapDispatchToProps = { logout };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Menu);
