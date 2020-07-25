@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ProfileImg from '../../../assets/images/profile.jpg'
+import {connect} from 'react-redux';
 
 const Profile = props => {
   return (
@@ -18,10 +19,10 @@ const Profile = props => {
           </div>
           <div className="col-md-9 mt-3">
             <div className="profile-name">
-              Daniel Saputra
+              {props.auth.data.full_name}
                 </div>
             <div className="profile-username">
-              @danielwetan
+              {props.auth.data.email}
                 </div>
             <div className="profile-city">
               <i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia
@@ -33,4 +34,8 @@ const Profile = props => {
   )
 }
 
-export default Profile;
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+export default connect(mapStateToProps)(Profile);

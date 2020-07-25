@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import History from './History';
 
-const HistoryList = () => {
+import {connect} from 'react-redux';
+
+const HistoryList = (props) => {
   const [transactionData, setTransactionData] = useState([]);
 
   const getTransactionData = () => {
     Axios({
       method: 'GET',
-      url: process.env.REACT_APP_API_URL + 'transaction/1'
+      url: process.env.REACT_APP_API_URL + `transaction/${props.auth.data.id}`
     })
       .then((res) => {
         // console.log(res.data.body)
@@ -51,4 +53,8 @@ const HistoryList = () => {
   )
 }
 
-export default HistoryList;
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+export default connect(mapStateToProps)(HistoryList);
