@@ -21,6 +21,23 @@
   color: #373D3F;
 }
 
+.btn-blue {
+  color: red;
+}
+
+.btn-blue {
+  background-color: #004380 !important;
+  color: white !important;
+  font-size: 15px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+.btn-blue:hover {
+  background-color: #004380;
+  color: lightgray;
+}
+
 .navbar-bg {
   background-color: white;
   box-shadow: 0px 1px 5px 0px #888;

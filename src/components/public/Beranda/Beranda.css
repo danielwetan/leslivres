@@ -25,16 +25,3 @@
   background-color: #004380;
   color: lightgray;
 }
-
-.btn-blue {
-  background-color: #004380;
-  color: white;
-  font-size: 15px;
-  font-family: 'Montserrat';
-  font-weight: 600;
-}
-
-.btn-blue:hover {
-  background-color: #004380;
-  color: lightgray;
-}

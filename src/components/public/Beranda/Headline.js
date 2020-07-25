@@ -26,7 +26,7 @@ const Headline = () => {
                   </span>
                   <div>
                     <Link to="/book">
-                      <button className="btn main-section-btn mt-3">Get the book <i class="fas fa-long-arrow-alt-right"></i></button>
+                      <button className="btn main-section-btn mt-3 btn-blue">Get the book <i class="fas fa-long-arrow-alt-right"></i></button>
                     </Link>
                   </div>
                 </div>

@@ -51,7 +51,7 @@ const Menu = props => {
               <button className="btn bg-white border-0 btn-blue" style={{color: "grey"}}>Login</button>
             </Link>
             <Link to="/register">
-              <button className="btn btn-blue" >Register</button>
+              <button className="btn btn-info btn-blue" >Register</button>
             </Link>
           </NavbarText>
         </Collapse>
