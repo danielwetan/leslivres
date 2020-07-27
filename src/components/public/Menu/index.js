@@ -28,26 +28,26 @@ const Menu = props => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
-  const logout = () => {
-    props.logout()
-    console.log("Logout!!")
-    const Toast = Swal.mixin({
-      toast: true,
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      onOpen: toast => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
-    Toast.fire({
-      icon: 'success',
-      title: 'Logout success!'
-    })
-    props.history.push('/')
-  }
+  // const logout = () => {
+  //   props.logout()
+  //   console.log("Logout!!")
+  //   const Toast = Swal.mixin({
+  //     toast: true,
+  //     position: 'top-end',
+  //     showConfirmButton: false,
+  //     timer: 3000,
+  //     timerProgressBar: true,
+  //     onOpen: toast => {
+  //       toast.addEventListener('mouseenter', Swal.stopTimer)
+  //       toast.addEventListener('mouseleave', Swal.resumeTimer)
+  //     }
+  //   })
+  //   Toast.fire({
+  //     icon: 'success',
+  //     title: 'Logout success!'
+  //   })
+  //   props.history.push('/')
+  // }
 
 
   return (
@@ -76,10 +76,7 @@ const Menu = props => {
             </NavItem>
           </Nav>
           <NavbarText>
-              <button className="btn bg-white border-0" onClick={logout}>Logout</button>
-            <Link to="/profile">
-              <button className="btn btn-info btn-blue" >Profile</button>
-            </Link>
+              {/* <button className="btn bg-white border-0" onClick={logout}>Logout</button> */}
             <Link to="/login">
               <button className="btn bg-white border-0">Login</button>
             </Link>
