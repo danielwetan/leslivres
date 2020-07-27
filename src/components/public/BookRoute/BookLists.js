@@ -48,6 +48,7 @@ const MainContent = () => {
 
   useEffect(() => {
     getBooks()
+    console.log(process.env.REACT_APP_API_URL + 'book')
   }, [search, status, page, genre]) // jika terjadi perubahan pada search, status, page, genre
 
   // equivalent to componentDidMount, fires once when component mounts

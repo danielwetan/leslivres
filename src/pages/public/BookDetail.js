@@ -46,7 +46,7 @@ class BookDetail extends React.Component {
   Borrow = () => {
     axios({
       method: 'POST',
-      url: 'http://192.168.43.186:3000/transaction',
+      url: 'https://leslivres.herokuapp.com/transaction',
       data: {
         user: this.props.auth.data.id,
         book: this.state.id,
