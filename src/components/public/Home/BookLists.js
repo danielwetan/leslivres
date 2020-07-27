@@ -20,7 +20,7 @@ const MainContent = () => {
 
   useEffect(() => {
     getBooks()
-  }, []) // componentDidMount
+  }, [])
 
   return(
     <>
