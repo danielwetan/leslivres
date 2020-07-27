@@ -1,5 +1,5 @@
 import BookRoute from './BookRoute'
-import DetailBook from './DetailBook'
+import BookDetail from './BookDetail'
 import Home from './Home'
 import Login from './Login'
 import Register from './Register'
@@ -8,7 +8,7 @@ import PageNotFound from './PageNotFound'
 
 export {
   BookRoute,
-  DetailBook,
+  BookDetail,
   Home,
   Login,
   Register,

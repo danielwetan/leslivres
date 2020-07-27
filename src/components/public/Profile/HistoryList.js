@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 const HistoryList = (props) => {
   const [transactionData, setTransactionData] = useState([]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getTransactionData = () => {
     Axios({
       method: 'GET',
@@ -24,7 +25,9 @@ const HistoryList = (props) => {
 
   useEffect(() => {
     getTransactionData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
 
   return (
     <>

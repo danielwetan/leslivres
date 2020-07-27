@@ -6,7 +6,6 @@ import axios from 'axios';
 
 import { Input } from 'reactstrap';
 
-
 const MainContent = () => {
   const location = useLocation()
   let params = new URLSearchParams(location.search)

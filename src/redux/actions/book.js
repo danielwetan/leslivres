@@ -45,9 +45,9 @@ const deleteBook = id => {
     payload: axios({
       method: "DELETE",
       url: process.env.REACT_APP_API_URL + `book/${id}`,
-      headers: {
-        Authorization: token
-      }
+      // headers: {
+      //   Authorization: token
+      // }
     })
   }
 }

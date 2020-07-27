@@ -2,10 +2,12 @@ import React from 'react';
 import MainNavbar from '../../components/public/Menu'
 import Sidebar from '../../components/public/Navigation/Sidebar'
 import Footer from '../../components/public/Footer'
-import Main from '../../components/public/DetailBook'
+import Main from '../../components/public/BookDetail'
 import axios from 'axios';
 
-class DetailBook extends React.Component {
+import {connect} from 'react-redux';
+
+class BookDetail extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -19,11 +21,13 @@ class DetailBook extends React.Component {
     }
   }
 
+
   getDetailBook = () => {
     axios({
       method: "GET",
       url: process.env.REACT_APP_API_URL + `book/${this.state.id}`,
     })
+    // this.props.book.getBookDetail(this.state.id)
     .then((res) => {
       this.setState({
         title: res.data.body[0].title,
@@ -39,8 +43,32 @@ class DetailBook extends React.Component {
     })
   }
 
+  Borrow = () => {
+    axios({
+      method: 'POST',
+      url: 'http://192.168.43.186:3000/transaction',
+      data: {
+        user: this.props.auth.data.id,
+        book: this.state.id,
+        status: 1,
+      },
+      headers: {  
+        Authorization: this.props.auth.data.mainToken
+      }
+    })
+    .then(() => {
+      console.log('Borrow success!')
+      window.location.replace("http://localhost:5000/profile")
+    })
+    .catch((err) => {
+      console.log(err.response.data.body)
+    })
+  }
+
+  
   componentDidMount() {
     this.getDetailBook()
+    // console.log(this.props.auth.data)
   }
 
   render() {
@@ -74,4 +102,9 @@ class DetailBook extends React.Component {
   }
 }
 
-export default DetailBook;
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+
+export default connect(mapStateToProps)(BookDetail);

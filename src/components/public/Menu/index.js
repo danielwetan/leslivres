@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
+
 
 import {
   Collapse,
@@ -14,6 +16,7 @@ import {
 // import Logo from '../../../images/logo/logo.png'
 
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 import './Menu.css';
@@ -26,10 +29,26 @@ const Menu = props => {
   const toggle = () => setIsOpen(!isOpen);
 
   const logout = () => {
-        
+    props.logout()
+    console.log("Logout!!")
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      onOpen: toast => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    Toast.fire({
+      icon: 'success',
+      title: 'Logout success!'
+    })
+    props.history.push('/')
   }
 
-  console.log(props)
 
   return (
     <>
@@ -79,4 +98,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = { logout };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+const routePush = withRouter(Menu)
+
+export default connect(mapStateToProps, mapDispatchToProps)(routePush);

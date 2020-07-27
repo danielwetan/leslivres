@@ -14,9 +14,9 @@ import {
   Input
 } from 'reactstrap';
 
-import './DetailBook.css';
+import './BookDetail.css';
 
-const DetailBook = props => {
+const BookDetail = props => {
   const [deleteModal, setDeleteModal] = useState(false);
   const toggleDeleteModal = () => setDeleteModal(!deleteModal);
 
@@ -176,4 +176,4 @@ const DetailBook = props => {
   }
 
 
-export default DetailBook;
+export default BookDetail;
