@@ -76,7 +76,6 @@ const Menu = props => {
             </NavItem>
           </Nav>
           <NavbarText>
-              {/* <button className="btn bg-white border-0" onClick={logout}>Logout</button> */}
             <Link to="/login">
               <button className="btn bg-white border-0">Login</button>
             </Link>

@@ -48,7 +48,6 @@ const MainContent = () => {
 
   useEffect(() => {
     getBooks()
-    console.log(process.env.REACT_APP_API_URL + 'book')
   }, [search, status, page, genre]) // jika terjadi perubahan pada search, status, page, genre
 
   // equivalent to componentDidMount, fires once when component mounts
@@ -78,16 +77,6 @@ const MainContent = () => {
           <h5 class="card-title">Book List</h5>
         </div>
         <div className="col-md-10">
-          {/* <div className="dropdown">
-            <button className="btn dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Genre
-              </button>
-            <div className="dropdown-menu " aria-labelledby="#dropdownMenuButton">
-              <Link to="/book?genre=biography" className="dropdown-item">Biography</Link>
-              <Link to="/book?genre=classic" className="dropdown-item">Classic</Link>
-              <Link to="/book?genre=history" className="dropdown-item">History</Link>
-            </div>
-          </div> */}
         <form>
           <Input type="text" name="search" placeholder="What are you looking for?" className="search-bar" />
         </form>
