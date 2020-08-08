@@ -1,8 +1,8 @@
-`National Library` is a frontend app based on React.
+`LesLivres` is a frontend app based on React.
 
 This app is a second week assignment on the [Arkademy](https://www.arkademy.com/) Bootcamp
 
-## :memo: Table Of Content
+## Table Of Content
 * [Prerequisites](https://github.com/danielwetan/national-library#prerequisites)
 * [Installation](https://github.com/danielwetan/national-library#installation)
 * [Features](https://github.com/danielwetan/national-library#features)
@@ -13,13 +13,22 @@ This app is a second week assignment on the [Arkademy](https://www.arkademy.com/
 ## Prerequisites
 - Node.js installed on the local machine
 - MySQL intalled on the local machine (ex. XAMPP)
+
 ## Installation
+
+#### Using Git Clone
 1. Clone this repository:
     `git clone https://github.com/danielwetan/national-library`
 2. Install depedencies:
     `cd national-library & npm install`
 4. Start the server:
     `npm start`
+ 
+#### Using Docker
+```docker pull danielwetan/leslivres ```
+
+Docker hub: https://hub.docker.com/r/danielwetan/leslivres
+
 
 ## Features
 - [x] CRUD
