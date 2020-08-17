@@ -1,7 +1,5 @@
 `LesLivres` is a frontend app based on React.
 
----
-
 **Parts of code:**
 * [Backend - NodeJs](https://github.com/danielwetan/leslivres-backend-nodejs)
 * [Backend - Go](https://github.com/danielwetan/leslivres-backend-go)
