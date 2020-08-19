@@ -1,6 +1,12 @@
 `LesLivres` is a frontend app based on React.
 
-This app is a second week assignment on the [Arkademy](https://www.arkademy.com/) Bootcamp
+**Parts of code:**
+* [Backend - NodeJs](https://github.com/danielwetan/leslivres-backend-nodejs)
+* [Backend - Go](https://github.com/danielwetan/leslivres-backend-go)
+* [Web](https://github.com/danielwetan/leslivres) (You're here)
+* [Mobile](https://github.com/danielwetan/leslivres-mobile)
+
+---
 
 ## Table Of Content
 * [Prerequisites](https://github.com/danielwetan/national-library#prerequisites)
