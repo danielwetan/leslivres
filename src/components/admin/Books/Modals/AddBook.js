@@ -19,7 +19,7 @@ const AddBook = () => {
     setGenre(1)
     setStatus("Available")
     const formData = new FormData();
-    formData.append('title', title);
+      formData.append('title', title);
     formData.append('author', author);
     formData.append('genre', genre);
     formData.append('description', description);
