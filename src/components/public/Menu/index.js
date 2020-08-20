@@ -13,7 +13,7 @@ import {
   NavbarText
 } from 'reactstrap';
 
-// import Logo from '../../../images/logo/logo.png'
+import Logo from '../../../../src/assets/images/logo.png'
 
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -21,8 +21,8 @@ import Swal from 'sweetalert2';
 
 import './Menu.css';
 
-import {connect} from 'react-redux';
-import {logout} from '../../../redux/actions/auth'
+import { connect } from 'react-redux';
+import { logout } from '../../../redux/actions/auth'
 
 const Menu = props => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,8 +54,8 @@ const Menu = props => {
     <>
       <Navbar color="light" light className="bg-white" expand="md" >
         <NavbarBrand href="/" className="nav-brand-text">
-          {/* <img src={Logo} width="160" height="40" alt="" className="logo"></img> */}
-          <span className="brand-a">Les</span><span className="brand-b">Livres</span>
+          <img src={Logo} width="150" height="50" alt="" className="logo"></img>
+          {/* <span className="brand-a">Les</span><span className="brand-b">Livres</span> */}
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

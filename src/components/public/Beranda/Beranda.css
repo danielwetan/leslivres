@@ -1,5 +1,11 @@
 .main-section {
   background-color: #e0dede;
+  /* padding-left: 20px;; */
+}
+
+.beranda {
+  /* background-color: red; */
+  margin-left: 30px;
 }
 
 .main-section-heading {
